@@ -21,7 +21,7 @@ echo <<<UPTOEND
   <BR/><BR/>
   <center>
   <input type="button" value="Return to Main Menu" 
-	onClick="window.location='index.html'"/>
+	onClick="window.location='../view/index.html'"/>
   </center>
 UPTOEND;
 

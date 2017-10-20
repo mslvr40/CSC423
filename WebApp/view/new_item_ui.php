@@ -210,9 +210,7 @@ Click the help icon above to learn more.
 		<h2>Insert A New Item</h2>
 
 	</div>
-		<div role="form" class="wpcf7" id="wpcf7-f90-o1" lang="en-US" dir="ltr">
-<div class="screen-reader-response"></div>
-<form onsubmit ="'../model/new_item.php"action='../model/new_item.php' method='post'>
+<form onsubmit ="'../model/new_item.php" action='../model/new_item.php' method='post'>
 <div style="display: none;">
 
 </div>
@@ -228,15 +226,15 @@ Click the help icon above to learn more.
 </table>
 
 	<div class="submit-action">
-	<div class="check-box">
-</p></div>
-<p>				<input type="submit" value="Submit"  />
+	
+<p>				<input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" />
 			</p></div>
-</div></form></div>		
+</form>	
 
 </section>
-&nbsp
 
+&nbsp
+<br>
 
 
 

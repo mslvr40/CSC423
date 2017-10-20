@@ -29,7 +29,7 @@
                 </tr>
             </table>
             <input type = "submit" value="submit">
-            <input type = "button" onclick="window.location='../index.html'" value = "back">
+            <input type = "button" onclick="window.location='index.html'" value = "back">
         
         </form>
     </center>

@@ -14,11 +14,12 @@
 				</tr>
 				<tr>
 					<td>Type:</td>
-					<td><select name="typeOff" id="typeOff"></td>
+					<td><select name="typeOff" id="typeOff">
 						<option selected="selected">Select the discount type</option>
 						<option>%</option>
 						<option>$</option>
 						</select>
+					</td>
 				</tr>
 			</table>
 		</form>

@@ -204,25 +204,29 @@ Click the help icon above to learn more.
     <div class="form-top-des">
 		<h2>Add A New Promotion</h2>
     </div>
-		<form onsubmit='../model/new_promotion.php' action='../model/new_promotion.php' method='post'>
+		<form onsubmit="'../model/new_promotion.php' action='../model/new_promotion.php' method='post'>
 		<div style="display: none;">
-			</div>
-				<div class="one_half"><span class="wpcf7-form-control-wrap firstname"><input type="text" name="promoName" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Promo Name" /></span></div>
-				<div class="one_half last"><span class="wpcf7-form-control-wrap lastname"><input type="text" name="promoID" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Promo ID" /></span></div>
-				<div class="one_half"><span class="wpcf7-form-control-wrap tele"><input type="text" name="promoAmount" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Amount Off" /></span></div>
+			
+		</div>
+				<div class="one_half"><span class="wpcf7-form-control-wrap firstname"><input type="text" name="itemDescription" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Item Description" /></span></div>
+
+				<div class="one_half"><span class="wpcf7-form-control-wrap promoName"><input type="text" name="promoName" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Promo Name" /></span></div>
+				<div class="one_half last"><span class="wpcf7-form-control-wrap promoID"><input type="text" name="promoID" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Promo ID" /></span></div>
+				<div class="one_half"><span class="wpcf7-form-control-wrap promoAmount"><input type="text" name="promoAmount" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Amount Off" /></span></div>
 				<div class="select-box"><span class="wpcf7-form-control-wrap typeOff"><select name="typeOff" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
 					<option value="Type of discount">Type of discount</option>
 					<option value="%">%</option>
 					<option value="$">$</option></select></span></div>
 
 				<div class="one_half"><span class="wpcf7-form-control-wrap tele"><input type="text" name="promoDescription" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Promotion Description" /></span></div>
+		<div class="submit-action">
 	
-      <div class="submit-action">
-      <p>
-			<input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" />
-		  </p></div>
-		</form>
-		</section>
+<p>				<input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" />
+			</p></div>
+     
+</form>
+	 
+</section>
 &nbsp
 <br>
 		</div>

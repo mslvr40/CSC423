@@ -200,11 +200,11 @@ Click the help icon above to learn more.
 </div>
 	<div class="right-side">
 		<!-- ####################Insert CSC423 Stuff here#############################-->
- <section class="form-section-row">
+ <section class="form-section row">
     <div class="form-top-des">
 		<h2>Add A New Promotion</h2>
     </div>
-		<form onsubmit="'../model/new_promotion.php' action='../model/new_promotion.php' method='post'>
+		<form onsubmit='../model/new_promotion.php' action='../model/new_promotion.php' method='post'>
 		<div style="display: none;">
 			
 		</div>

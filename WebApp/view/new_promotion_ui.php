@@ -239,33 +239,7 @@ Click the help icon above to learn more.
 			<input type = "submit" value="Submit" class="wpcf7-form-control wpcf7-submit" />
 		  </p></div>
 		</form>
-
-<section class="form-section row">
-	
-		<div class="form-top-des">
-		<h2>Insert A New Item</h2>
-
-	</div>
-<form onsubmit ="'../model/new_item.php" action='../model/new_item.php' method='post'>
-<div style="display: none;">
-
-</div>
-	<div class="one_half"><span class="wpcf7-form-control-wrap firstname"><input type="text" name="itemDescription" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Item Description" /></span></div>
-	<div class="one_half last"><span class="wpcf7-form-control-wrap lastname"><input type="text" name="itemCategory" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Category" /></span></div>
-	<div class="one_half"><span class="wpcf7-form-control-wrap tele"><input type="text" name="itemDepartment" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Department" /></span></div>
-	<table>
-<tr>
-
-	<td style ="><div class="one_half last"><span class="wpcf7-form-control-wrap bussinessemail"><input type="text" min="1" step="any" name = "itemPurchaseCost" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Purchase Price" /></span></div></td>
-	<td><div class="one_half"><span class="wpcf7-form-control-wrap companysize"><input type="text" min="1" step="any" name="itemRetailPrice" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Retail Price" /></span></div></td>
-</tr>
-</table>
-	<div class="submit-action">
-	
-<p>				<input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" />
-			</p></div>
-</form>	
-</section>
+		</section>
 &nbsp
 <br>
 		</div>

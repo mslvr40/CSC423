@@ -8,7 +8,7 @@
 		
 		if($output){
 			if ($output != ""){
-				echo '<center><font color="blue">' .$output.' </font></center><br />';
+				echo '<center><font color="blue">'.$output.'</font></center><br />';
 			}
 		}
 		

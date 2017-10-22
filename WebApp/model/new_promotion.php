@@ -2,8 +2,8 @@
 <head></head>
 	<body>
 <?php
-require ('../view/new_promotion_result.inc');
-require ('../db.inc');
+require('../view/new_promotion_result.inc');
+require('../db.inc');
 
 insert_promo();
 

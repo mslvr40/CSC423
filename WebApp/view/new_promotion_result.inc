@@ -13,7 +13,7 @@
 		}
 		
 		echo <<<UPTOEND
-			<BR /><BR />
+			<BR/><BR/>
 			<center>
 			<input type="button" value="Return to Main Menu"
 				onClick="window.location='../view/index.html'"/>

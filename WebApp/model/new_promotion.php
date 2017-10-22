@@ -1,9 +1,8 @@
 <html>
-<head>
-</head>
-<body>
+<head></head>
+	<body>
 <?php
-require ('..view/new_promotion_result.inc');
+require ('../view/new_promotion_result.inc');
 require ('../db.inc');
 
 insert_promo();
@@ -18,7 +17,7 @@ function insert_promo()
 	$type = $_POST['typeOff'];
 	$description = $_POST['promoDescription'];
 	
-	$query = "Insert Promotion (promoID, promoName, promoDescription, promoAmount, typeOff)
+	$query = "Insert Promotion (PromoCode, Name, Description, AmountOff, PromoType)
 	values ('$ID', '$name', '$description', '$amount', '$type')";
 	
 	$result = mysql_query($query);
@@ -45,7 +44,7 @@ function connect_and_select_db($server, $username, $pwd, $dbname){
 	
 	$dbh = mysql_select_db($dbname);
 	if(!$dbh){
-		echo "Unable to select ".$dbname."; " . mysql_error();
+		echo "Unable to select ".$dbname.": " . mysql_error();
 		exit;
 	}
 }

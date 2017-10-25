@@ -57,10 +57,10 @@
 
   ?>
 
-  <input type="text" id="numberInput" onkeyup="searchNumber()" placeholder="Item Number">
-  <input type="text" id="desInput" onkeyup="searchDescription()" placeholder="Item Description" >
-  <input type="text" id="catInput" onkeyup="searchCategory()" placeholder="Category" >
-  <input type="text" id="depInput" onkeyup="searchDepartment()" placeholder="Department" >
+  <input type="text" id="numberInput" onkeyup="searchAll()" placeholder="Item Number">
+  <input type="text" id="desInput" onkeyup="searchAll()" placeholder="Item Description" >
+  <input type="text" id="catInput" onkeyup="searchAll()" placeholder="Category" >
+  <input type="text" id="depInput" onkeyup="searcAll()" placeholder="Department" >
 
   <table id="myTable">
     <tr class="header">
@@ -100,77 +100,51 @@
 
 
     <script>
-      function searchNumber() {
-        var input, filter, table, tr, td, i;
-        input = document.getElementById("numberInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[0];
-          if (td) {
-            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }       
-        }
-      }
 
-      function searchDescription() {
-        var input, filter, table, tr, td, i;
-        input = document.getElementById("desInput");
-        filter = input.value.toUpperCase();
+      function searchAll() {
+        var i1, i2, i3, i4, table, tr, tds;
+        i1 = document.getElementById("numberInput").value.toUpperCase();
+        i2 = document.getElementById("desInput").value.toUpperCase();
+        i3 = document.getElementById("catInput").value.toUpperCase();
+        i4 = document.getElementById("depInput").value.toUpperCase();
         table = document.getElementById("myTable");
         tr = table.getElementsByTagName("tr");
         for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[1];
-          if (td) {
-            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }       
-        }
-      }
-      function searchCategory() {
-        var input, filter, table, tr, td, i;
-        input = document.getElementById("catInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[2];
-          if (td) {
-            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }       
-        }
-      }
-      function searchDepartment() {
-        var input, filter, table, tr, td, i;
-        input = document.getElementById("depInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByTagName("td")[3];
-          if (td) {
-            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-            } else {
-              tr[i].style.display = "none";
-            }
-          }       
-        }
-      }
 
-
+          tds = tr[i].getElementsByTagName("td");
+          var firstCol, secondCol, thirdCol, fourthCol;
+          if(tds[0]){
+           firstCol = tds[0].textContent.toUpperCase();
+          }
+          else {
+            firstCol="";
+          }
+          if(tds[1]){
+            secondCol = tds[1].textContent.toUpperCase();
+          }
+          else {
+            secondCol="";
+          }
+          if(tds[2]){
+            thirdCol = tds[2].textContent.toUpperCase();
+          }
+          else {
+            thirdCol="";
+          }
+          if(tds[3]){
+            fourthCol = tds[3].textContent.toUpperCase();
+          }
+          else {
+            fourthCol="";
+          }
+          if (firstCol.indexOf(i1) > -1 && secondCol.indexOf(i2) > -1 && thirdCol.indexOf(i3) > -1 && fourthCol.indexOf(i4) > -1) {
+            tr[i].style.display = "";
+          } 
+          else {
+            tr[i].style.display = "none";
+          }
+        }   
+      }    
     </script>
   </body>
   </html>

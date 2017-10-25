@@ -2,7 +2,7 @@
 <html>
 <head>
 <style>
-* {
+{
   box-sizing: border-box;
 }
 
@@ -64,26 +64,31 @@
 
 <table id="myTable">
   <tr class="header">
-    <th style="width:25%;">Item Number</th>
-    <th style="width:25%;">Item Description</th>
-    <th style="width:25%;">Item Category</th>
-    <th style="width:25%;">Item Department</th>
+    <th style="width:23.75%;">Item Number</th>
+    <th style="width:23.75%;">Item Description</th>
+    <th style="width:23.75%;">Item Category</th>
+    <th style="width:23.75%;">Item Department</th>
+    <th style="width:5%;"></th>
   </tr>
   <?php
 
-  while($row = mysql_fetch_Array($result))
-{
-  echo "<tr>";
-  echo "<td>" . $row['ItemNumber'] . "</td>";
-  echo "<td>" . $row['ItemDescription'] . "</td>";
-  echo "<td>" . $row['Category'] . "</td>";
-  echo "<td>" . $row['DepartmentName'] . "</td>";
-  echo "</tr>";
-  echo "<form>"
-}
-
-   
+  while($row = mysql_fetch_Array($result)) {
 ?>
+ <form action='../model/modify_item.php' method='POST'>
+  <tr>
+<td>  <input type="hidden" name="itemNumberInput" value="<?php echo htmlspecialchars($row['ItemNumber']); ?>"> <?php echo $row['ItemNumber']; ?> </td>
+
+<td>  <input type="hidden" name="itemDescriptionInput" value="<?php echo htmlspecialchars($row['ItemDescription']); ?>"> <?php echo $row['ItemDescription']; ?> </td>
+
+<td>  <input type="hidden" name="categoryInput" value="<?php echo htmlspecialchars($row['Category']); ?>"> <?php echo $row['Category']; ?> </td>
+
+<td>  <input type="hidden" name="departmentNameInput" value="<?php echo htmlspecialchars($row['DepartmentName']); ?>"> <?php echo $row['DepartmentName']; ?> </td>
+ <td> <input type = 'submit' value='Modify'></td>
+</tr>
+  </form>
+<?php } ?>
+
+
 </table>
 
 

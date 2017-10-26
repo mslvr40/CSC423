@@ -22,7 +22,7 @@
 		
 
 		$query = "UPDATE Item SET ItemDescription = '$description', Category = '$category', DepartmentName = '$department',
-		PurchaseCost = '$purchaseCost', FullRetailPrice = '$retailPrice' WHERE  itemNumber = $number";
+				PurchaseCost = '$purchaseCost', FullRetailPrice = '$retailPrice' WHERE  itemNumber = $number";
 		
 		
 

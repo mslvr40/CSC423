@@ -8,24 +8,24 @@ function show_item_result($message)
   echo "</HEAD>";
   echo "<BODY>";
 
-  
-  if ($message)
-  {
-    if ($message != "")
-       {
-	 echo '<center><font color="blue">'.$message.'</font></center><br />';
-       }
-  }
+    
+    if ($message)
+    {
+      if ($message != "")
+      {
+        echo '<center><font color="blue">'.$message.'</font></center><br />';
+      }
+    }
 
-echo <<<UPTOEND
-  <BR/><BR/>
-  <center>
-  <input type="button" value="Return to Main Menu" 
-	onClick="window.location='../view/index.html'"/>
-  </center>
-UPTOEND;
+    echo <<<UPTOEND
+    <BR/><BR/>
+    <center>
+      <input type="button" value="Return to Main Menu" 
+      onClick="window.location='../view/search_item_ui.php'"/>
+    </center>
+    UPTOEND;
 
- echo "</BODY>";
- echo "</HTML>";
+  echo "</BODY>";
+echo "</HTML>";
 }
 ?>

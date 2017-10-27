@@ -1,13 +1,13 @@
 <?php
 
-function show_item_result($output, $ID, $name, $description, $amount, $type)
+function show_promo_result($output, $name, $description, $amount, $type)
 {
 
   echo "<HTML>";
   echo "<HEAD>";
   echo "</HEAD>";
   echo "<BODY>";
-
+  
   
   if ($output)
   {

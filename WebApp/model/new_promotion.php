@@ -9,16 +9,16 @@ insert_promo();
 
 function insert_promo()
 {
+	
 	connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
 	
 	$name = $_POST['promoName'];
-	$ID = $_POST['promoID'];
 	$amount = $_POST['promoAmount'];
 	$type = $_POST['typeOff'];
 	$description = $_POST['promoDescription'];
 	
-	$query = "Insert Promotion (PromoCode, Name, Description, AmountOff, PromoType)
-	values ('$ID', '$name', '$description', '$amount', '$type')";
+	$query = "Insert Promotion (Name, Description, AmountOff, PromoType)
+	values ('$name', '$description', '$amount', '$type')";
 	
 	$result = mysql_query($query);
 	$output = "";
@@ -30,7 +30,7 @@ function insert_promo()
 		$output = "Promotion: $id inserted successfully.";
 	}
 	
-	show_promo_result($output, $ID, $name, $description, $amount, $type);
+	show_promo_result($output, $name, $description, $amount, $type);
 	
 }
 

@@ -1,6 +1,6 @@
 <?php
 
-function show_item_result($message, $description, $category, $department, $purchaseCost, $retailPrice)
+function show_item_result($message)
 {
 
   echo "<HTML>";

@@ -22,12 +22,12 @@ function insert_promo()
 	
 	$result = mysql_query($query);
 	$output = "";
-	
+	$id = mysql_insert_id();
 	if (!$result){
-		$output = "Error in inserting Promotion: $description: ". mysql_error();
+		$output = "Error in inserting Promotion: $id: ". mysql_error();
 	}
 	else{
-		$output = "Promotion: $description inserted successfully.";
+		$output = "Promotion: $id inserted successfully.";
 	}
 	
 	show_promo_result($output, $ID, $name, $description, $amount, $type);

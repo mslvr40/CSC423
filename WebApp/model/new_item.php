@@ -2,7 +2,7 @@
 <html>
 <head></head>
 <body>
-	
+
 	<?php
 	require('../view/new_item_result.inc');
 	require('../db.inc');
@@ -19,7 +19,7 @@
 		$department = $_POST['itemDepartment'];
 		$purchaseCost = $_POST['itemPurchaseCost'];
 		$retailPrice = $_POST['itemRetailPrice'];
-		
+
 
 		$query = "Insert Item (ItemDescription, Category, DepartmentName, PurchaseCost, FullRetailPrice)
 		values ( '$description', '$category', '$department', '$purchaseCost', '$retailPrice')";
@@ -27,19 +27,20 @@
 		$result = mysql_query($query);
 
 		$message = "";
-
+		$id = mysql_insert_id();
 		if (!$result) 
 		{
 			$message = "Error in inserting Item: $description: ". mysql_error();
 		}
 		else
 		{
-			$message = "Item: $description inserted successfully.";
-			
+			$message = "Item: $id inserted successfully.";
+
 		}
-		
-		show_item_result($message, $description, $category, $department, $purchaseCost, $retailPrice);
-		
+
+
+		show_item_result($message);
+
 	}
 
 	function connect_and_select_db($server, $username, $pwd, $dbname)

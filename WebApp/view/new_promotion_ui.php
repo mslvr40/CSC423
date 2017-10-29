@@ -18,7 +18,7 @@
 
 <center>
 		<h2>ADD A NEW PROMOTION</h2>
-		<form action='../model/new_promotion.php' method='post'>
+		<form action='../model/new_promotion.php' method='post' onSubmit="return verifyFields();">
 			<table>
 				<tr>
 					<td>Promotion Name:</td>

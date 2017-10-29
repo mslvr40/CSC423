@@ -1,6 +1,18 @@
 <html>
 <head>
 	<title>Add New Promotion</title>
+	<meta charset="UTF-8">
+	<script src="../Validate Promotion.js"><script>
+			<script>
+				function verifyFields()	{
+			console.log("function");
+			
+			valPromoName();
+			valPromoAmount();
+			valPromoDescription();
+			alertMessage();
+		}
+	</script>
 </head>
 <body>
 

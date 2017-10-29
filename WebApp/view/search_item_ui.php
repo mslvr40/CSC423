@@ -259,7 +259,7 @@ Click the help icon above to learn more.
               <input type="text" id="numberInput" onkeyup="searchAll()" placeholder="Item Number">
               <input type="text" id="desInput" onkeyup="searchAll()" placeholder="Item Description" >
               <input type="text" id="catInput" onkeyup="searchAll()" placeholder="Category" >
-              <input type="text" id="depInput" onkeyup="searcAll()" placeholder="Department" >
+              <input type="text" id="depInput" onkeyup="searchAll()" placeholder="Department" >
 
               <table id="myTable">
                 <tr class="header">

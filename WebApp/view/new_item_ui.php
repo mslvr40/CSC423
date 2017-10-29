@@ -1,6 +1,17 @@
 <html>
 <head>
     <title> Add new Item</title>
+    <meta charset="UTF-8">
+    <script src="../Validate Regex for Item (Modify and New).js"></script>
+    <script>
+        function verifItems(){
+        console.log("function);
+        validatePurchasedCost();
+        validateRetailPrice();
+        validateItemID();
+        validateItemDescription();
+        }
+    </script>
 </head>
 <body>
     <center>

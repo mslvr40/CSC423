@@ -2,7 +2,7 @@
 <head>
     <title> Add new Item</title>
     <meta charset="UTF-8">
-    <script src="../ItemValidate.js"></script>
+    <script src="../../ItemValidate.js"></script>
     <script>
         function verifItems(){
         console.log("function");
@@ -16,7 +16,7 @@
 <body>
     <center>
         <h2>ADD A NEW ITEM</h2>
-        <form action='../model/new_item.php' method='post'>
+        <form action='../model/new_item.php' method='post' onsubmit="verifItems();">
             <table>
                 <tr>
                     <td> Item description: </td>

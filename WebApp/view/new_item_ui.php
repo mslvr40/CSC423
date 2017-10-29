@@ -5,7 +5,7 @@
     <script src="../Validate Regex for Item (Modify and New).js"></script>
     <script>
         function verifItems(){
-        console.log("function);
+        console.log("function");
         validatePurchasedCost();
         validateRetailPrice();
         validateItemID();

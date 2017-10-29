@@ -296,7 +296,7 @@ Click the help icon above to learn more.
                     tr = table.getElementsByTagName("tr");
                     for (i = 0; i < tr.length; i++) {
                       tds = tr[i].getElementsByTagName("td");
-                      var firstCol, secondCol, thirdCol, fourthCol;
+                      var firstCol, secondCol, thirdCol;
                       if(tds[0]){
                        firstCol = tds[0].textContent.toUpperCase();
                      }
@@ -315,13 +315,7 @@ Click the help icon above to learn more.
                     else {
                       thirdCol="";
                     }
-                    if(tds[3]){
-                      fourthCol = tds[3].textContent.toUpperCase();
-                    }
-                    else {
-                      fourthCol="";
-                    }
-                    if (firstCol.indexOf(i1) > -1 && secondCol.indexOf(i2) > -1 && thirdCol.indexOf(i3) > -1 && fourthCol.indexOf(i4) > -1) {
+                    if (firstCol.indexOf(i1) > -1 && secondCol.indexOf(i2) > -1 && thirdCol.indexOf(i3) > -1) {
                       tr[i].style.display = "";
                     } 
                     else {

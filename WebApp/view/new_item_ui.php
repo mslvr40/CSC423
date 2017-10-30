@@ -29,6 +29,7 @@
 	<meta name="twitter:image" content="https://goaptaris.com/wp-content/uploads/2015/11/Blog_Slider_Desktop.jpg" />
 	<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/goaptaris.com\/","name":"Aptaris","alternateName":"GoAptaris.com","potentialAction":{"@type":"SearchAction","target":"https:\/\/goaptaris.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
 	<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/goaptaris.com\/insightsnews\/","sameAs":[],"@id":"#organization","name":"Aptaris LLC","logo":"https:\/\/goaptaris.com\/wp-content\/uploads\/2017\/06\/Aptaris-4C.png"}</script>
+	<script src="ItemValidate.js"></script>
 	<!-- / Yoast SEO plugin. -->
 
 	<link rel='dns-prefetch' href='//js.hs-scripts.com' />
@@ -273,7 +274,7 @@ Click the help icon above to learn more.
 
 											<div class="submit-action">
 
-												<p>				<input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" />
+												<p>				<input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" onClick="validatePurchsedCost();validateRetailPrice();validateItemID();validateItemDescription();alertMessage();" />
 												</p></div>
 											</form>	
 

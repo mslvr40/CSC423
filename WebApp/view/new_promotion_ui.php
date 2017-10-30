@@ -28,7 +28,7 @@
 <meta name="twitter:image" content="https://goaptaris.com/wp-content/uploads/2015/11/Blog_Slider_Desktop.jpg" />
 <script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/goaptaris.com\/","name":"Aptaris","alternateName":"GoAptaris.com","potentialAction":{"@type":"SearchAction","target":"https:\/\/goaptaris.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
 <script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/goaptaris.com\/insightsnews\/","sameAs":[],"@id":"#organization","name":"Aptaris LLC","logo":"https:\/\/goaptaris.com\/wp-content\/uploads\/2017\/06\/Aptaris-4C.png"}</script>
-<script src="PromotionValidate.js"></script>		
+		
 <!-- / Yoast SEO plugin. -->
 
 <link rel='dns-prefetch' href='//js.hs-scripts.com' />
@@ -89,6 +89,58 @@ Click the help icon above to learn more.
     width: 100% !important;
 }
 		</style>
+<script type="text/javascript">
+	
+	function valPromoName(){
+		if(document.getElementById("promoName").value==""){
+			alert("Promotion Name is a required field!");
+			return false;
+		}
+		return true;
+	}
+	function valPromoAmount(){
+		var promoAmountValue = document.getElementById("promoAmount").value;
+		if(promoAmountValue == ""){
+			alert("Promotion Amount is a required field!");
+			return false;
+		}
+		else if(!(promoAmountValue.match("^[\d]*[\.]?[\d]*$"))){
+			alert("Promotion Amount must be a numberical value!");
+			return false;
+		}
+		return true;
+	}
+	function valTypeOff(){
+		if(document.getElementById("typeOff").value==""){
+			alert("You must select a type of discount!");
+			return false;
+		}
+		return true;
+	}
+	function valPromoDesc(){
+		if(document.getElementById("promoDescription").value==""){
+			alert("Promotion Description is a required field!");
+			return false;
+		}
+		return true;
+	}
+	function valForm(){
+		if(!valPromoName()){
+			return false;
+		}
+		if(!valPromoAmount()){
+			return false;
+		}
+		if(!valTypeOff()){
+			return false;
+		}
+		if(!valPromoDesc()){
+			return false;
+		}
+		return true;
+	}
+	
+</script>
 		</head>
 	<body class="page-template page-template-page-template page-template-news-tpl page-template-page-templatenews-tpl-php page page-id-15 insightsnews">
 		<div id="wrapper">
@@ -205,7 +257,7 @@ Click the help icon above to learn more.
     <div class="form-top-des">
 		<h2>Add A New Promotion</h2>
     </div>
-		<form onsubmit='../model/new_promotion.php' action='../model/new_promotion.php' method='post'>
+		<form action='../model/new_promotion.php' onsubmit="return valForm()" method='post'>
 		<div style="display: none;">
 			
 		</div>
@@ -220,7 +272,7 @@ Click the help icon above to learn more.
 				<div class="one_half"><span class="wpcf7-form-control-wrap tele"><input type="text" name="promoDescription" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Promotion Description" /></span></div>
 		<div class="submit-action">
 	
-<p>				<input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" onClick="valPromoName();valPromoAmount();valPromoDescription();alertMessage();" />
+<p>			<input type="submit" onclick="return valForm();" value="Submit" class="wpcf7-form-control wpcf7-submit" />
 			</p></div>
      
 </form>

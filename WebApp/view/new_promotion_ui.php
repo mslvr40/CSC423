@@ -105,7 +105,7 @@ Click the help icon above to learn more.
 			return false;
 		}
 		else if(!(promoAmountValue.match("^[\d]*[\.]?[\d]*$"))){
-			alert("Promotion Amount must be a numberical value!");
+			alert("Promotion Amount must be a numerical value!");
 			return false;
 		}
 		return true;

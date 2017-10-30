@@ -125,6 +125,7 @@ Click the help icon above to learn more.
 		return true;
 	}
 	function valForm(){
+		alert("HELLO");
 		if(!valPromoName()){
 			return false;
 		}

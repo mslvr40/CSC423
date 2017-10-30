@@ -23,7 +23,7 @@
 
 		$item = mysql_fetch_assoc($itemResult);
 		$promo = mysql_fetch_assoc($promoResult);
-		
+		$itemName = $item["ItemDescription"];
 		if($promo['PromoType'] == 'Dollar'){
 			$newPrice = $item["PurchaseCost"] - $promo["AmountOff"];
 		}
@@ -51,11 +51,11 @@
 		$id = mysql_insert_id();
 		if (!$result) 
 		{
-			$message = "Error in adding promotion item: $id: ". mysql_error();
+			$message = "Error in adding Promotion Item $promoCode:  ". mysql_error();
 		}
 		else
 		{
-			$message = "Promotion Item: $promoCode inserted successfully. The new price of Item: $itemNumber is \$ $newPrice  ";
+			$message = "Promotion Item: $promoCode inserted successfully. The new price of Item $itemNumber: $itemName is \$ $newPrice  ";
 
 		}
 

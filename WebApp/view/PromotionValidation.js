@@ -36,5 +36,6 @@ function valPromoDescription() {
 }
 
 function alertMessage() {
+    alert("Hello");
     alert(errorMessage);
 }

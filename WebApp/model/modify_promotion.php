@@ -32,11 +32,11 @@
 
 		if (!$result) 
 		{
-			$message = "Error in modifying Item: $number: ". mysql_error();
+			$message = "Error in modifying Promotion: $code: ". mysql_error();
 		}
 		else
 		{
-			$message = "Item: $number was modified successfully.";
+			$message = "Promotion: $code was modified successfully.";
 			
 		}
 		

@@ -55,7 +55,7 @@
 		}
 		else
 		{
-			$message = "Promotion Item: $id inserted successfully. The new price of Item: $itemNumber is \$ $newPrice  ";
+			$message = "Promotion Item: $promoCode inserted successfully. The new price of Item: $itemNumber is \$ $newPrice  ";
 
 		}
 

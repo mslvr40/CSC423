@@ -92,6 +92,7 @@ Click the help icon above to learn more.
 <script type="text/javascript">
 	
 	function valPromoName(){
+		alert("Hello1");
 		if(document.getElementById("promoName").value==""){
 			alert("Promotion Name is a required field!");
 			return false;
@@ -99,6 +100,7 @@ Click the help icon above to learn more.
 		return true;
 	}
 	function valPromoAmount(){
+		alert("Hello2");
 		var promoAmountValue = document.getElementById("promoAmount").value;
 		if(promoAmountValue == ""){
 			alert("Promotion Amount is a required field!");
@@ -111,6 +113,7 @@ Click the help icon above to learn more.
 		return true;
 	}
 	function valTypeOff(){
+		alert("Hello3");
 		if(document.getElementById("typeOff").value==""){
 			alert("You must select a type of discount!");
 			return false;
@@ -118,6 +121,7 @@ Click the help icon above to learn more.
 		return true;
 	}
 	function valPromoDesc(){
+		alert("Hello4");
 		if(document.getElementById("promoDescription").value==""){
 			alert("Promotion Description is a required field!");
 			return false;

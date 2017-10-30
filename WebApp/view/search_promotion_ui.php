@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 <!doctype html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js">

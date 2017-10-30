@@ -93,6 +93,78 @@ Click the help icon above to learn more.
 	width: 100% !important;
 }
 </style>
+
+<script type="text/javascript">
+
+	function validateDes(){
+		
+		if(document.getElementById("itemDescription").value==""){
+			alert("Description is a required field!");
+			return false;
+		}
+		return true;
+	}
+	function validateCap(){
+		if(document.getElementById("itemCategory").value==""){
+			alert("Category is a required field!");
+			return false;
+		}
+		return true;
+	}
+	function validateDep(){
+		if(document.getElementById("itemDepartment").value==""){
+			alert("Description is a required field");
+			return false;
+		}
+		return true;
+	}
+	function validateCost(){
+
+		if(document.getElementById("itemPurchaseCost").value==""){
+			alert("Purchase Cost is a required field");
+			return false;
+		}
+		var regex = new RegExp("^([0-9]+|([0-9]*\.[0-9]{2}))$");
+		if(!regex.test(document.getElementById("itemPurchaseCost").value)){
+			alert("Please fix format of Purchase Cost Field");
+			return false;
+		}
+		return true;
+	}
+	function validateRetail(){
+			if(document.getElementById("itemRetailPrice").value==""){
+			alert("Retail Price is a required field");
+			return false;
+		}
+		var regex = new RegExp("^([0-9]+|([0-9]*\.[0-9]{2}))$");
+		if(!regex.test(document.getElementById("itemRetailPrice").value)){
+			alert("Please fix format of Retail Price Field");
+			return false;
+		}
+		return true;
+	}
+
+	function validateForm() {
+
+		if(!validateDes()){
+			return false;
+		}
+		if(!validateCap()){
+			return false;
+		}
+		if(!validateDep()){
+			return false;
+		}
+		if(!validateCost()){
+			return false;
+		}
+		if(!validateRetail()){
+			return false;
+		}
+		return true;
+	}
+
+</script>
 </head>
 <body class="page-template page-template-page-template page-template-news-tpl page-template-page-templatenews-tpl-php page page-id-15 insightsnews">
 	<div id="wrapper">
@@ -212,12 +284,12 @@ Click the help icon above to learn more.
 										<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 									</div>
-									<form onsubmit ="'../model/new_item.php" action='../model/new_item.php' method='post'>
+									<form  action='../model/new_item.php' onsubmit="return validateForm()" method='post'>
 										<div style="display: none;">
 
 										</div>
-										<div class="one_half"><span class="wpcf7-form-control-wrap firstname"><input type="text" name="itemDescription" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Item Description" /></span></div>
-										<div class="select-box"><span class="wpcf7-form-control-wrap typeOff"><select name="itemCategory" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
+										<div class="one_half"><span class="wpcf7-form-control-wrap firstname"><input type="text" id = "itemDescription" name="itemDescription" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Item Description" /></span></div>
+										<div class="select-box"><span class="wpcf7-form-control-wrap typeOff"><select id = "itemCategory" name="itemCategory" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
 											<option value="" rel = "select"  selected>Category</option>
 											<option value="ACCESSORIES/FOOTWEAR" rel="acc">ACCESSORIES/FOOTWEAR</option>
 											<option value="BASIC APPAREL" rel = basic>BASIC APPAREL</option>
@@ -227,7 +299,7 @@ Click the help icon above to learn more.
 
 
 										<div class="select-box"><span class="wpcf7-form-control-
-											wrap typeOff"><select name="itemDepartment" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
+											wrap typeOff"><select id="itemDepartment" name="itemDepartment" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
 												<option class = "select" value=""  selected>Department</option>
 												<option class = "acc" value="ACCESSORIES">ACCESSORIES</option>
 												<option class = "acc" value="FOOTWEAR">FOOTWEAR</option>
@@ -267,14 +339,18 @@ Click the help icon above to learn more.
 											<table>
 												<tr>
 
-													<td style ="><div class="one_half last"><span class="wpcf7-form-control-wrap bussinessemail"><input type="text" min="1" step="any" name = "itemPurchaseCost" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Purchase Price" /></span></div></td>
-													<td><div class="one_half"><span class="wpcf7-form-control-wrap companysize"><input type="text" min="1" step="any" name="itemRetailPrice" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Retail Price" /></span></div></td>
+													<td style ="><div class="one_half last"><span class="wpcf7-form-control-wrap bussinessemail"><input type="text" min="1" step="any" id =  "itemPurchaseCost" name = "itemPurchaseCost" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Purchase Price" /></span></div></td>
+													<td><div class="one_half"><span class="wpcf7-form-control-wrap companysize"><input type="text" min="1" step="any" id="itemRetailPrice" name="itemRetailPrice" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Retail Price" /></span></div></td>
 												</tr>
 											</table>
 
 											<div class="submit-action">
 
+<<<<<<< HEAD
+												<p>				<input type="submit" onclick="return validateForm();" value="Submit" class="wpcf7-form-control wpcf7-submit" />
+=======
 												<p>				<input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" onClick="validatePurchsedCost();validateRetailPrice();validateItemID();validateItemDescription();alertMessage();" />
+>>>>>>> 6c9715f670b6153833485dc4f13d38783d216f6c
 												</p></div>
 											</form>	
 

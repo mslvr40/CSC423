@@ -163,7 +163,7 @@ Click the help icon above to learn more.
 						<div class="blog-banner desktop-view">
 							<img src="https://goaptaris.com/wp-content/uploads/2015/11/Blog_Slider_Desktop-1280x494.jpg" class="attachment-home-slider size-home-slider wp-post-image" alt="" srcset="https://goaptaris.com/wp-content/uploads/2015/11/Blog_Slider_Desktop.jpg 1280w, https://goaptaris.com/wp-content/uploads/2015/11/Blog_Slider_Desktop-250x96.jpg 250w, https://goaptaris.com/wp-content/uploads/2015/11/Blog_Slider_Desktop-768x296.jpg 768w, https://goaptaris.com/wp-content/uploads/2015/11/Blog_Slider_Desktop-700x270.jpg 700w, https://goaptaris.com/wp-content/uploads/2015/11/Blog_Slider_Desktop-120x46.jpg 120w" sizes="(max-width: 1280px) 100vw, 1280px" />		<div class="blog-caption">
 								<h2>Administrative Console</h2>
-      <p>Manage anything from item promotions to advertisement events</p>
+								<p>Manage anything from item promotions to advertisement events</p>
 							</div>
 						</div>
 						
@@ -171,7 +171,7 @@ Click the help icon above to learn more.
 							<img src="https://goaptaris.com/wp-content/uploads/2015/11/Blog_Header_Responsive.jpg" alt=""/>
 							<div class="caption">
 								<h2>Administrative Console</h2>
-      <p>Manage anything from item promotions to advertisement events</p>
+								<p>Manage anything from item promotions to advertisement events</p>
 							</div>
 						</div>
 					</section>
@@ -208,6 +208,7 @@ Click the help icon above to learn more.
 									
 									<div class="form-top-des">
 										<h2>Insert A New Item</h2>
+										<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 									</div>
 									<form onsubmit ="'../model/new_item.php" action='../model/new_item.php' method='post'>
@@ -216,48 +217,70 @@ Click the help icon above to learn more.
 										</div>
 										<div class="one_half"><span class="wpcf7-form-control-wrap firstname"><input type="text" name="itemDescription" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Item Description" /></span></div>
 										<div class="select-box"><span class="wpcf7-form-control-wrap typeOff"><select name="itemCategory" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
-					<option value="" disabled selected>Category</option>
-					<option value="ACCESSORIES/FOOTWEAR">ACCESSORIES/FOOTWEAR</option>
-					<option value="BASIC APPAREL">BASIC APPAREL</option>
-					<option value="FOOD CONVENIENCE">FOOD CONVENIENCE</option>
-					<option value="FOOD GROCERY">FOOD GROCERY</option>
-					</select></span></div>
-					
-
-<div class="select-box"><span class="wpcf7-form-control-
-wrap typeOff"><select name="itemDepartment" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
-					<option value="" disabled selected>Department</option>
-					<option value="ACCESSORIES">ACCESSORIES</option>
-					<option value="FOOTWEAR">FOOTWEAR</option>
-					<option value="CHILDRENS BASICS">CHILDRENS BASICS</option>
-					<option value="LADIES BASICS">LADIES BASICS</option>
-					<option value="MENS BASIC">MENS BASIC</option>
-					<option value="CANDY">CANDY</option>
-					<option value="REFRIGIRATED">REFRIGIRATED</option>
-					<option value="COOKIES/CRACKERS">COOKIES/CRACKERS</option>
-					<option value="GROCERY">GROCERY</option>
-					<option value="SALTY SNACKS">SALTY SNACKS</option>
-					</select></span></div>										
-										<table>
-											<tr>
-
-												<td style ="><div class="one_half last"><span class="wpcf7-form-control-wrap bussinessemail"><input type="text" min="1" step="any" name = "itemPurchaseCost" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Purchase Price" /></span></div></td>
-												<td><div class="one_half"><span class="wpcf7-form-control-wrap companysize"><input type="text" min="1" step="any" name="itemRetailPrice" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Retail Price" /></span></div></td>
-											</tr>
-										</table>
-
-										<div class="submit-action">
-											
-											<p>				<input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" />
-											</p></div>
-										</form>	
-
-									</section>
-
-									&nbsp
-									<br>
+											<option value="" rel = "select"  selected>Category</option>
+											<option value="ACCESSORIES/FOOTWEAR" rel="acc">ACCESSORIES/FOOTWEAR</option>
+											<option value="BASIC APPAREL" rel = basic>BASIC APPAREL</option>
+											<option value="FOOD CONVENIENCE" rel ="food">FOOD CONVENIENCE</option>
+											<option value="FOOD GROCERY" rel = "grocery">FOOD GROCERY</option>
+										</select></span></div>
 
 
+										<div class="select-box"><span class="wpcf7-form-control-
+											wrap typeOff"><select name="itemDepartment" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
+												<option class = "select" value=""  selected>Department</option>
+												<option class = "acc" value="ACCESSORIES">ACCESSORIES</option>
+												<option class = "acc" value="FOOTWEAR">FOOTWEAR</option>
+												<option class = "basic" value="CHILDRENS BASICS">CHILDRENS BASICS</option>
+												<option class = "basic">LADIES BASICS</option>
+												<option class = "basic">MENS BASIC</option>
+												<option class = "food" value="CANDY">CANDY</option>
+												<option class = "food" value="REFRIGIRATED">REFRIGIRATED</option>
+												<option class = "grocery" value="COOKIES/CRACKERS">COOKIES/CRACKERS</option>
+												<option class = "grocery" value="GROCERY">GROCERY</option>
+												<option class = "grocery" value="SALTY SNACKS">SALTY SNACKS</option>
+											</select></span></div>	
+
+											<script>
+												$(document).ready(function(){
+													var $cat = $('select[name=itemCategory]'),
+													$items = $('select[name=itemDepartment]');
+
+													$cat.change(function(){
+														var $this = $(this).find(':selected'),
+														rel = $this.attr('rel'),
+														$set = $items.find('option.' + rel);
+
+														if ($set.size() < 0) {
+															$items.hide();
+															return;
+														}
+
+														$items.show().find('option').hide();
+
+														$set.show().first().prop('selected', true);
+													});
+												});
+											</script>
+
+
+											<table>
+												<tr>
+
+													<td style ="><div class="one_half last"><span class="wpcf7-form-control-wrap bussinessemail"><input type="text" min="1" step="any" name = "itemPurchaseCost" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Purchase Price" /></span></div></td>
+													<td><div class="one_half"><span class="wpcf7-form-control-wrap companysize"><input type="text" min="1" step="any" name="itemRetailPrice" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Retail Price" /></span></div></td>
+												</tr>
+											</table>
+
+											<div class="submit-action">
+
+												<p>				<input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" />
+												</p></div>
+											</form>	
+
+										</section>
+
+										&nbsp
+										<br>
 
 
 
@@ -270,93 +293,95 @@ wrap typeOff"><select name="itemDepartment" class="wpcf7-form-control wpcf7-sele
 
 
 
+
+
+									</div>
 								</div>
+
 							</div>
-							
 						</div>
 					</div>
-				</div>
 
-				<style type="text/css">
-				.mobilecat{float: left; width: 100%; margin-bottom: 20px;}.right-sidess {
-					float: right!important;
-					width: 90%!important;
-					margin-top: 60px;
-					}.blog-thumb{float:left;}.pg-num {
-						float: left;
-						width: 100%;
-						text-align: center;
-						margin: 10px 0px;
-						}a.page-numbers {
-							padding: 5px;
-						}
-					</style>
-					<!-- content end -->
-
-
-					<script>
-						var num = 0;
-						var post_set = "0";
-
-						jQuery("a.load-more").on('click', function(){
-							num++;
-							if(num < post_set){
-								jQuery(this).attr('data_offset', num);
-								var offset = jQuery(this).attr('data_offset');
-								jQuery.ajax({
-									type:"POST",
-									url: "https://goaptaris.com/wp-admin/admin-ajax.php",
-									data: {action: 'call_admin_ajax', offset:offset},
-									success:function(resp){
-										$('.ajax_append').append(resp);
-									}
-								});
-							}else{
-								jQuery(this).text("No More posts");
+					<style type="text/css">
+					.mobilecat{float: left; width: 100%; margin-bottom: 20px;}.right-sidess {
+						float: right!important;
+						width: 90%!important;
+						margin-top: 60px;
+						}.blog-thumb{float:left;}.pg-num {
+							float: left;
+							width: 100%;
+							text-align: center;
+							margin: 10px 0px;
+							}a.page-numbers {
+								padding: 5px;
 							}
-						});
-					</script>
-					<script>
-						jQuery(document).ready(function(){
-							jQuery("#left-sidebar h2").click(function(){
-								var classStatus = jQuery("#myClassAdd").val();
-								jQuery(".list-cat").toggle();
-								if(classStatus != 0){
-									jQuery(".list-cat").removeClass("myClass");
-									jQuery("#myClassAdd").attr('value','0');
-								} else {
-									jQuery(".list-cat").addClass("myClass");
-									jQuery("#myClassAdd").attr('value','1');
+						</style>
+						<!-- content end -->
+
+
+						<script>
+							var num = 0;
+							var post_set = "0";
+
+							jQuery("a.load-more").on('click', function(){
+								num++;
+								if(num < post_set){
+									jQuery(this).attr('data_offset', num);
+									var offset = jQuery(this).attr('data_offset');
+									jQuery.ajax({
+										type:"POST",
+										url: "https://goaptaris.com/wp-admin/admin-ajax.php",
+										data: {action: 'call_admin_ajax', offset:offset},
+										success:function(resp){
+											$('.ajax_append').append(resp);
+										}
+									});
+								}else{
+									jQuery(this).text("No More posts");
 								}
 							});
-						});
-					</script>
-					<script type="text/javascript">
-						setInterval(function(){
-							if($('.form-section form').hasClass('sent')){
-								$('.form-top-des').hide();
-								$('.form-section').addClass('nopadding');
-							}
-						}, 100);
-					</script>
-					<style>
-					.blog-sm-desc h4 a, .blog-sm-desc p a { display: inline;}.right-sides{float:left;width:100%; margin-top: 60px;}
-				</style>
-				<!-- footer start -->
-				<footer class="footer row">
-					<div class="container">
-						<div class="upper-footer row">
-							<div class="line"></div>
-							<h2>Follow Us</h2>
-							<div class="social">
-								<div id="text-3" class="widget_text">			<div class="textwidget"><a target="_blank" href="https://twitter.com/goaptaris" class="icon1"></a>
-									<a target="_blank" href="https://www.facebook.com/Aptaris/" class="icon2"></a>
-									<a target="_blank" href="https://www.linkedin.com/company/aptaris" class="icon3"></a>
-									<a target="_blank" href="https://www.youtube.com/channel/UCaH0rZ7rvI6MQyOnUGTBSnQ" class="icon4"></a>
-									<!--<a href="#" class="icon5"></a>--></div>
-								</div>				</div>
-								<span>LAST TWEET</span>
-								<div id="twitter-2" class="widget_twitter"><div><h3><span class='twitterwidget twitterwidget-title'>Twitter: goaptaris</span></h3><ul><li><span class='entry-content'>"When people are treated right and feel valued, they work harder and play harder for their coaches"
+						</script>
+						<script>
+							jQuery(document).ready(function(){
+								jQuery("#left-sidebar h2").click(function(){
+									var classStatus = jQuery("#myClassAdd").val();
+									jQuery(".list-cat").toggle();
+									if(classStatus != 0){
+										jQuery(".list-cat").removeClass("myClass");
+										jQuery("#myClassAdd").attr('value','0');
+									} else {
+										jQuery(".list-cat").addClass("myClass");
+										jQuery("#myClassAdd").attr('value','1');
+									}
+								});
+							});
+						</script>
+						<script type="text/javascript">
+							setInterval(function(){
+								if($('.form-section form').hasClass('sent')){
+									$('.form-top-des').hide();
+									$('.form-section').addClass('nopadding');
+								}
+							}, 100);
+						</script>
+						<style>
+						.blog-sm-desc h4 a, .blog-sm-desc p a { display: inline;}.right-sides{float:left;width:100%; margin-top: 60px;}
+					</style>
+					<!-- footer start -->
+					<footer class="footer row">
+						<div class="container">
+							<div class="upper-footer row">
+								<div class="line"></div>
+								<h2>Follow Us</h2>
+								<div class="social">
+									<div id="text-3" class="widget_text">			<div class="textwidget"><a target="_blank" href="https://twitter.com/goaptaris" class="icon1"></a>
+										<a target="_blank" href="https://www.facebook.com/Aptaris/" class="icon2"></a>
+										<a target="_blank" href="https://www.linkedin.com/company/aptaris" class="icon3"></a>
+										<a target="_blank" href="https://www.youtube.com/channel/UCaH0rZ7rvI6MQyOnUGTBSnQ" class="icon4"></a>
+										<!--<a href="#" class="icon5"></a>--></div>
+									</div>				</div>
+									<span>LAST TWEET</span>
+									<div id="twitter-2" class="widget_twitter"><div><h3><span class='twitterwidget twitterwidget-title'>Twitter: goaptaris</span></h3><ul><li><span class='entry-content'>"When people are treated right and feel valued, they work harder and play harder for their coaches"
 <a href="https://t.co/t0Ysg2yIVE">https://t.co/t0Ysg2yIVE</a></span> <span class='entry-meta'><span class='time-meta'><a href="http://twitter.com/GoAptaris/statuses/795701676124545024">about 11 months ago</a></span> <span class='from-meta'>from <a href="http://www.hootsuite.com" rel="nofollow">Hootsuite</a></span></span> <span class="intent-meta"><a href="http://twitter.com/intent/tweet?in_reply_to=795701676124545024" data-lang="en" class="in-reply-to" title="Reply">Reply</a><a href="http://twitter.com/intent/retweet?tweet_id=795701676124545024" data-lang="en" class="retweet" title="Retweet">Retweet</a><a href="http://twitter.com/intent/favorite?tweet_id=795701676124545024" data-lang="en" class="favorite" title="Favorite">Favorite</a></span></li></ul></div></div>				<!--<p>Dutch Startupmap - All startups from Holland in one map #startups #aanmelen #handig
 		http://t.co/skGG4JA3 via@sharethis</p>
 		<a href="#" class="whoo">@whoopaa</a> -->

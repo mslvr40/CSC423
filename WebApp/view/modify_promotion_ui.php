@@ -190,15 +190,15 @@ Click the help icon above to learn more.
             <div class="blog-banner desktop-view">
               <img src="https://goaptaris.com/wp-content/uploads/2015/11/Blog_Slider_Desktop-1280x494.jpg" class="attachment-home-slider size-home-slider wp-post-image" alt="" srcset="https://goaptaris.com/wp-content/uploads/2015/11/Blog_Slider_Desktop.jpg 1280w, https://goaptaris.com/wp-content/uploads/2015/11/Blog_Slider_Desktop-250x96.jpg 250w, https://goaptaris.com/wp-content/uploads/2015/11/Blog_Slider_Desktop-768x296.jpg 768w, https://goaptaris.com/wp-content/uploads/2015/11/Blog_Slider_Desktop-700x270.jpg 700w, https://goaptaris.com/wp-content/uploads/2015/11/Blog_Slider_Desktop-120x46.jpg 120w" sizes="(max-width: 1280px) 100vw, 1280px" />    <div class="blog-caption">
                 <h2>Administrative Console</h2>
-      <p>Manage anything from item promotions to advertisement events</p>
+                <p>Manage anything from item promotions to advertisement events</p>
               </div>
             </div>
 
             <div class="mobile-banner">
               <img src="https://goaptaris.com/wp-content/uploads/2015/11/Blog_Header_Responsive.jpg" alt=""/>
               <div class="caption">
-               <h2>Administrative Console</h2>
-      <p>Manage anything from item promotions to advertisement events</p>
+                <h2>Administrative Console</h2>
+                <p>Manage anything from item promotions to advertisement events</p>
               </div>
             </div>
           </section>
@@ -233,133 +233,46 @@ Click the help icon above to learn more.
               <!-- ####################Insert CSC423 Stuff here#############################-->
 
 
-              <?php 
+              <section class="form-section row">
 
-              require('../db.inc');
+                <div class="form-top-des">
+                  <h2>Modify Promotion</h2>
 
-              $conn = mysql_connect(DB_SERVER, DB_UN, DB_PWD);
-              if (!$conn) {
-                echo "Unable to connect to DB: " . mysql_error();
-                exit;
-              }
-
-  // Select the database  
-              $dbh = mysql_select_db(DB_NAME);
-              if (!$dbh){
-                echo "Unable to select ".DB_NAME.": " . mysql_error();
-                exit;
-              }
-
-              $query = "SELECT * FROM Item";
-
-              $result = mysql_query($query);
-
-              ?>
-
-              <input type="text" id="numberInput" onkeyup="searchAll()" placeholder="Item Number">
-              <input type="text" id="desInput" onkeyup="searchAll()" placeholder="Item Description" >
-              <input type="text" id="catInput" onkeyup="searchAll()" placeholder="Category" >
-              <input type="text" id="depInput" onkeyup="searcAll()" placeholder="Department" >
-
-              <table id="myTable">
-                <tr class="header">
-                  <th style="width:15.83%;">Item Number</th>
-                  <th style="width:15.83%;">Item Description</th>
-                  <th style="width:15.83%;">Item Category</th>
-                  <th style="width:15.83%;">Item Department</th>
-                  <th style="width:15.83%;">Purchase Cost</th>
-                  <th style="width:15.83%;">Retail Price</th>
-                  <th style="width:5%;"></th>
-                </tr>
-                <?php
-
-                while($row = mysql_fetch_Array($result)) {
-                  ?>
-                  <form id = "<?php echo htmlspecialchars($row['ItemNumber']); ?>" action='modify_item_ui.php' method='POST'>
-                    <tr>
-                      <td>  <input type="hidden" name="itemNumberInput" value="<?php echo htmlspecialchars($row['ItemNumber']); ?>"> <?php echo $row['ItemNumber']; ?> </td>
-
-                      <td>  <input type="hidden" name="itemDescriptionInput" value="<?php echo htmlspecialchars($row['ItemDescription']); ?>"> <?php echo $row['ItemDescription']; ?> </td>
-
-                      <td>  <input type="hidden" name="categoryInput" value="<?php echo htmlspecialchars($row['Category']); ?>"> <?php echo $row['Category']; ?> </td>
-
-                      <td>  <input type="hidden" name="departmentNameInput" value="<?php echo htmlspecialchars($row['DepartmentName']); ?>"> <?php echo $row['DepartmentName']; ?> </td>
-
-                      <td>  <input type="hidden" name="purchaseCostInput" value="<?php echo htmlspecialchars($row['PurchaseCost']); ?>"> <?php echo $row['PurchaseCost']; ?> </td>
-
-                      <td>  <input type="hidden" name="retailPriceInput" value="<?php echo htmlspecialchars($row['FullRetailPrice']); ?>"> <?php echo $row['FullRetailPrice']; ?> </td>
-
-                      <td> <input type = 'button' onClick="clickMe(1, <?php echo htmlspecialchars($row['ItemNumber']); ?>)" value='Modify'>
-                       <input type = 'button' onClick="clickMe(2, <?php echo htmlspecialchars($row['ItemNumber']); ?>)" value='Add Promotion'></td>
-
-                      <script>
-                          function clickMe(i, frm){
-                            if(i==1){
-                              document.getElementById(frm).action="modify_item_ui";
-                            }
-                            if(i==2){
-                              document.getElementById(frm).action="search_promotion_ui.php";
-                            }
-                            document.getElementById(frm).submit();
-
-                          }
-
-                      </script>
-                    </tr>
-                  </form>
-                  <?php } ?>
+                </div>
+                <?php 
+                $code = $_POST['promoCodeInput'];
+                $name = $_POST['promoNameInput'];
+                $description = $_POST['descriptionInput'];
+                $amount = $_POST['amountOffInput'];
+                $type = $_POST['promoTypeInput'];
 
 
-                </table>
 
+                ?>
+                <form  action='../model/modify_promotion.php' method='post'>
+                  <div style="display: none;">
 
-                <script>
+                  </div>
 
-                  function searchAll() {
-                    var i1, i2, i3, i4, table, tr, tds;
-                    i1 = document.getElementById("numberInput").value.toUpperCase();
-                    i2 = document.getElementById("desInput").value.toUpperCase();
-                    i3 = document.getElementById("catInput").value.toUpperCase();
-                    i4 = document.getElementById("depInput").value.toUpperCase();
-                    table = document.getElementById("myTable");
-                    tr = table.getElementsByTagName("tr");
-                    for (i = 1; i < tr.length; i++) {
+                  <div class="one_half"><span class="wpcf7-form-control-wrap firstname">Promo Code<input type="text" readonly name = "promoCode" id = "promoCode" value = "<?php echo htmlspecialchars($code); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="PromoCode" /></span></div>
 
-                      tds = tr[i].getElementsByTagName("td");
-                      var firstCol, secondCol, thirdCol, fourthCol;
-                      if(tds[0]){
-                       firstCol = tds[0].textContent.toUpperCase();
-                     }
-                     else {
-                      firstCol="";
-                    }
-                    if(tds[1]){
-                      secondCol = tds[1].textContent.toUpperCase();
-                    }
-                    else {
-                      secondCol="";
-                    }
-                    if(tds[2]){
-                      thirdCol = tds[2].textContent.toUpperCase();
-                    }
-                    else {
-                      thirdCol="";
-                    }
-                    if(tds[3]){
-                      fourthCol = tds[3].textContent.toUpperCase();
-                    }
-                    else {
-                      fourthCol="";
-                    }
-                    if (firstCol.indexOf(i1) > -1 && secondCol.indexOf(i2) > -1 && thirdCol.indexOf(i3) > -1 && fourthCol.indexOf(i4) > -1) {
-                      tr[i].style.display = "";
-                    } 
-                    else {
-                      tr[i].style.display = "none";
-                    }
-                  }   
-                }    
-              </script>
+                  <div class="one_half"><span class="wpcf7-form-control-wrap firstname">Name<input type="text" name = "name" id = "name" value = "<?php echo htmlspecialchars($name); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" /></span></div>
+
+                  <div class="one_half last"><span class="wpcf7-form-control-wrap lastname">Description<input type="text" name = "description" id = "description" value = "<?php echo htmlspecialchars($description); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Description" /></span></div>
+                  <div class="one_half"><span class="wpcf7-form-control-wrap tele">Amount Off<input type="text" name = "amount" id = "amount" value = "<?php echo htmlspecialchars($amount); ?>" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Amount" /></span></div>
+                    <div class="select-box"><span class="wpcf7-form-control-wrap typeOff"><select name="typeOff" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
+          <option value="Type of discount">Type of discount</option>
+          <option value="Percent" <?php if($type == "Percent"){ ?> selected="selected" <?php } ?> >Percent</option>
+          <option value="Dollar" <?php if($type == "Dollar"){ ?> selected="selected" <?php } ?> >Dollar</option></select></span></div>
+
+                  <div class="submit-action">
+
+                    <p>             <input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" />
+                    </p>
+                  </div>
+                </form> 
+
+              </section>
 
 
 

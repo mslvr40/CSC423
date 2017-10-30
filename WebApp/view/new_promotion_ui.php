@@ -92,7 +92,6 @@ Click the help icon above to learn more.
 <script type="text/javascript">
 	
 	function valPromoName(){
-		alert("Hello1");
 		if(document.getElementById("promoName").value==""){
 			alert("Promotion Name is a required field!");
 			return false;
@@ -100,20 +99,14 @@ Click the help icon above to learn more.
 		return true;
 	}
 	function valPromoAmount(){
-		alert("Hello2");
 		var promoAmountValue = document.getElementById("promoAmount").value;
-		if(promoAmountValue == ""){
-			alert("Promotion Amount is a required field!");
-			return false;
-		}
-		else if(!(promoAmountValue.match("^[\d]*[\.]?[\d]*$"))){
-			alert("Promotion Amount must be a numerical value!");
+		if(!(promoAmountValue.match("^[\d]*[\.]?[\d]*$")) || promoAmountValue == ""){
+			alert("Promotion Amount must be a numerical value and non-empty!");
 			return false;
 		}
 		return true;
 	}
 	function valTypeOff(){
-		alert("Hello3");
 		if(document.getElementById("typeOff").value==""){
 			alert("You must select a type of discount!");
 			return false;
@@ -121,7 +114,6 @@ Click the help icon above to learn more.
 		return true;
 	}
 	function valPromoDesc(){
-		alert("Hello4");
 		if(document.getElementById("promoDescription").value==""){
 			alert("Promotion Description is a required field!");
 			return false;
@@ -145,7 +137,7 @@ Click the help icon above to learn more.
 	}
 	
 </script>
-		</head>
+</head>
 	<body class="page-template page-template-page-template page-template-news-tpl page-template-page-templatenews-tpl-php page page-id-15 insightsnews">
 		<div id="wrapper">
   <!-- heder strat -->

@@ -216,27 +216,27 @@ Click the help icon above to learn more.
 										</div>
 										<div class="one_half"><span class="wpcf7-form-control-wrap firstname"><input type="text" name="itemDescription" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Item Description" /></span></div>
 										<div class="select-box"><span class="wpcf7-form-control-wrap typeOff"><select name="itemCategory" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
-					<option value="" disabled selected>Category</option>
-					<option value="ACCESSORIES/FOOTWEAR">%</option>
-					<option value="BASIC APPAREL">$</option>
-					<option value="FOOD CONVENIENCE">%</option>
-					<option value="FOOD GROCERY">%</option>
+					<option value="" disabled selected>CATEGORY</option>
+					<option value="ACCESSORIES/FOOTWEAR">ACCESSORIES/FOOTWEAR</option>
+					<option value="BASIC APPAREL">BASIC APPAREL</option>
+					<option value="FOOD CONVENIENCE">FOOD CONVENIENCE</option>
+					<option value="FOOD GROCERY">FOOD GROCERY</option>
 					</select></span></div>
 										<div class="one_half"><span class="wpcf7-form-control-wrap tele"><input type="text" name="itemDepartment" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Department" /></span></div>
 
 <div class="select-box"><span class="wpcf7-form-control-
 wrap typeOff"><select name="itemDepartment" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
-					<option value="" disabled selected>Department</option>
-					<option value="ACCESSORIES">%</option>
-					<option value="FOOTWEAR">$</option>
-					<option value="CHILDRENS BASICS">%</option>
-					<option value="LADIES BASICS">%</option>
-					<option value="MENS BASIC">%</option>
-					<option value="CANDY">%</option>
-					<option value="REFRIGIRATED">%</option>
-					<option value="COOKIES/CRACKERS">%</option>
-					<option value="GROCERY">%</option>
-					<option value="SALTY SNACKS">%</option>
+					<option value="" disabled selected>DEPARTMENT</option>
+					<option value="ACCESSORIES">ACCESSORIES</option>
+					<option value="FOOTWEAR">FOOTWEAR</option>
+					<option value="CHILDRENS BASICS">CHILDRENS BASICS</option>
+					<option value="LADIES BASICS">LADIES BASICS</option>
+					<option value="MENS BASIC">MENS BASIC</option>
+					<option value="CANDY">CANDY</option>
+					<option value="REFRIGIRATED">REFRIGIRATED</option>
+					<option value="COOKIES/CRACKERS">COOKIES/CRACKERS</option>
+					<option value="GROCERY">GROCERY</option>
+					<option value="SALTY SNACKS">SALTY SNACKS</option>
 					</select></span></div>										
 										<table>
 											<tr>

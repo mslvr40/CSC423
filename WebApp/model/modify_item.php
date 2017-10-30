@@ -14,11 +14,12 @@
 
 		connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
 		$number = $_POST['itemNumber'];
-		$description = $_POST['itemDescription'];
-		$category = $_POST['itemCategory'];
-		$department = $_POST['itemDepartment'];
-		$purchaseCost = $_POST['itemPurchaseCost'];
-		$retailPrice = $_POST['itemRetailPrice'];
+		$desMessage = $_POST['itemDescription'];
+		$description = mysql_real_escape_string($_POST['itemDescription']);
+		$category = mysql_real_escape_string($_POST['itemCategory']);
+		$department = mysql_real_escape_string($_POST['itemDepartment']);
+		$purchaseCost = mysql_real_escape_string($_POST['itemPurchaseCost']);
+		$retailPrice = mysql_real_escape_string($_POST['itemRetailPrice']);
 		
 
 		$query = "UPDATE Item SET ItemDescription = '$description', Category = '$category', DepartmentName = '$department',
@@ -32,11 +33,11 @@
 
 		if (!$result) 
 		{
-			$message = "Error in modifying Item: $number: ". mysql_error();
+			$message = "Error in modifying Item $number: $desMessage: ". mysql_error();
 		}
 		else
 		{
-			$message = "Item: $number was modified successfully.";
+			$message = "Item $number: $desMessage: was modified successfully.";
 			
 		}
 		

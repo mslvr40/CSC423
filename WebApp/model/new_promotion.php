@@ -11,11 +11,11 @@ function insert_promo()
 {
 	
 	connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
-	
-	$name = $_POST['promoName'];
-	$amount = $_POST['promoAmount'];
-	$type = $_POST['typeOff'];
-	$description = $_POST['promoDescription'];
+	$nameMessage = $_POST['promoName'];
+	$name = mysql_real_escape_string($_POST['promoName']);
+	$amount = mysql_real_escape_string($_POST['promoAmount']);
+	$type = mysql_real_escape_string($_POST['typeOff']);
+	$description = mysql_real_escape_string($_POST['promoDescription']);
 	
 	$query = "Insert Promotion (Name, Description, AmountOff, PromoType)
 	values ('$name', '$description', '$amount', '$type')";
@@ -24,10 +24,10 @@ function insert_promo()
 	$output = "";
 	$id = mysql_insert_id();
 	if (!$result){
-		$output = "Error in inserting Promotion: $id: ". mysql_error();
+		$output = "Error in inserting Promotion $id: $nameMessage: ". mysql_error();
 	}
 	else{
-		$output = "Promotion: $id inserted successfully.";
+		$output = "Promotion $id: $nameMessage: inserted successfully.";
 	}
 	
 	show_promo_result($output, $name, $description, $amount, $type);

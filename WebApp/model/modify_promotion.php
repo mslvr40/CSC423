@@ -14,10 +14,11 @@
 
 		connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
 		$code = $_POST['promoCode'];
-		$name = $_POST['name'];
-		$description = $_POST['description'];
-		$amount = $_POST['amount'];
-		$type = $_POST['typeOff'];
+		$nameMessage = $_POST['name'];
+		$name = mysql_real_escape_string($_POST['name']);
+		$description = mysql_real_escape_string($_POST['description']);
+		$amount = mysql_real_escape_string($_POST['amount']);
+		$type = mysql_real_escape_string($_POST['typeOff']);
 	
 		
 
@@ -32,11 +33,11 @@
 
 		if (!$result) 
 		{
-			$message = "Error in modifying Promotion: $code: ". mysql_error();
+			$message = "Error in modifying Promotion $code: $nameMessage: ". mysql_error();
 		}
 		else
 		{
-			$message = "Promotion: $code was modified successfully.";
+			$message = "Promotion $code: $nameMessage: was modified successfully.";
 			
 		}
 		

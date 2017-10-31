@@ -119,6 +119,70 @@ Click the help icon above to learn more.
   background-color: #f1f1f1;
 }
 </style>
+<script type="text/javascript">
+  
+  function valPromoName(){
+    if(document.getElementById("name").value==""){
+      alert("Promotion Name is a required field!");
+      return false;
+    }
+    return true;
+  }
+  function valPromoAmount(){
+
+    if(document.getElementById("amount").value==""){
+      alert("Promotion Amount is a required field");
+      return false;
+    }
+
+    if(document.getElementById("typeOff").value=="Dollar"){
+      var regex = new RegExp("^([0-9]+|([0-9]*\.[0-9]{2}))$");
+      if(!regex.test(document.getElementById("amount").value)){
+        alert("Please fix format of Promotion Amount Field");
+        return false;
+      }
+      return true;
+    }
+    else{
+      var regex = new RegExp("^([0-9]+|([0-9]*\.[0-9]+))$");
+      if(!regex.test(document.getElementById("amount").value)){
+        alert("Please fix format of Promotion Amount Field");
+        return false;
+      }
+      return true;
+    }
+  }
+  function valTypeOff(){
+    if(document.getElementById("typeOff").value==""){
+      alert("You must select a type of discount!");
+      return false;
+    }
+    return true;
+  }
+  function valPromoDesc(){
+    if(document.getElementById("description").value==""){
+      alert("Promotion Description is a required field!");
+      return false;
+    }
+    return true;
+  }
+  function valForm(){
+    if(!valPromoName()){
+      return false;
+    }
+    if(!valPromoAmount()){
+      return false;
+    }
+    if(!valTypeOff()){
+      return false;
+    }
+    if(!valPromoDesc()){
+      return false;
+    }
+    return true;
+  }
+  
+</script>
 </head>
 <body class="page-template page-template-page-template page-template-news-tpl page-template-page-templatenews-tpl-php page page-id-15 insightsnews">
   <div id="wrapper">
@@ -249,7 +313,7 @@ Click the help icon above to learn more.
 
 
                 ?>
-                <form  action='../model/modify_promotion.php' method='post'>
+                <form  action='../model/modify_promotion.php' onsubmit="return valForm()" method='post'>
                   <div style="display: none;">
 
                   </div>
@@ -260,14 +324,14 @@ Click the help icon above to learn more.
 
                   <div class="one_half last"><span class="wpcf7-form-control-wrap lastname">Description<input type="text" name = "description" id = "description" value = "<?php echo htmlspecialchars($description); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Description" /></span></div>
                   <div class="one_half"><span class="wpcf7-form-control-wrap tele">Amount Off<input type="text" name = "amount" id = "amount" value = "<?php echo htmlspecialchars($amount); ?>" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Amount" /></span></div>
-                    <div class="select-box"><span class="wpcf7-form-control-wrap typeOff"><select name="typeOff" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
+                    <div class="select-box"><span class="wpcf7-form-control-wrap typeOff"><select name="typeOff" id="typeOff" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
           <option value="Type of discount">Type of discount</option>
-          <option value="Percent" <?php if($type == "Percent"){ ?> selected="selected" <?php } ?> >Percent</option>
-          <option value="Dollar" <?php if($type == "Dollar"){ ?> selected="selected" <?php } ?> >Dollar</option></select></span></div>
+          <option value="Percent" <?php if($type == "Percent"){ ?> selected="selected" <?php } ?> >PERCENT</option>
+          <option value="Dollar" <?php if($type == "Dollar"){ ?> selected="selected" <?php } ?> >DOLLAR</option></select></span></div>
 
                   <div class="submit-action">
 
-                    <p>             <input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit" />
+                    <p>             <input type="submit" value="Submit" onclick="return valForm()" class="wpcf7-form-control wpcf7-submit" />
                     </p>
                   </div>
                 </form> 

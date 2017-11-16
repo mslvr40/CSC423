@@ -1,7 +1,7 @@
 
 <?php
     session_start();
-    include_once('database.inc');
+    include_once('../db.inc');
     ob_start();
     
 ?>

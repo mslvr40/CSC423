@@ -266,10 +266,9 @@ Click the help icon above to learn more.
 							<div class="right-side">
 								<!-- ####################Insert CSC423 Stuff here#############################-->
 								<section class="form-section row">
-									<a href = "report1_ui.php"> Search promotions by date </a>
 										<form method = "post" action = "../model/report1.php">
 											<input type = "date" name = "date"/>
-											<submit type = "submit" value = "submit"/>
+											<input type = "submit" value = "submit"/>
 										</form>
 									
 

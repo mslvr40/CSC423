@@ -9,12 +9,12 @@ insert_promo();
 
 function insert_promo()
 {
-	
+	echo "<script>alert('djbfsjfb')</script>";
 	connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
 	$date = $_POST['date'];
 	
 	
-	$query = "SELECT AdEvent.Name, Promotion.Name FROM AdEvent, AdEventPromotion, Promotion WHERE AdEventPromotion.PromoCode = Promotion.PromoCode AND AdEventPromotion.EventCode = AdEvent.EventCode AND '$date' BETWEEN AdEvent.StartDate AND AdEvent.EndDate"
+	$query = "SELECT AdEvent.Name, Promotion.Name FROM AdEvent, AdEventPromotion, Promotion WHERE AdEventPromotion.PromoCode = Promotion.PromoCode AND AdEventPromotion.EventCode = AdEvent.EventCode AND '$date' BETWEEN AdEvent.StartDate AND AdEvent.EndDate";
 	
 	$result = mysql_query($query);
 	$output = "";
@@ -26,7 +26,7 @@ function insert_promo()
 		$output = "Promotion $id: $nameMessage: inserted successfully.";
 	}
 	
-	show_report_result($result, $output, $date);
+	show_report1_result($result, $output, $date);
 	
 }
 

@@ -328,7 +328,7 @@ Click the help icon above to learn more.
 
                       </div>
 
-                      <div class="one_half"><span class="wpcf7-form-control-wrap firstname">Item Number<input type="text"readonly name = "itemNumber" id = "itemNumber" value = "<?php echo htmlspecialchars($initNumber); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Item Description" /></span></div>
+                      <div class="one_half"><span class="wpcf7-form-control-wrap firstname">Item Number<input style="background-color:lightgray;" type="text"readonly name = "itemNumber" id = "itemNumber" value = "<?php echo htmlspecialchars($initNumber); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Item Description" /></span></div>
 
                       <div class="one_half"><span class="wpcf7-form-control-wrap firstname">Item Description<input type="text" name = "itemDescription" id = "itemDescription" value = "<?php echo htmlspecialchars($initDescription); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Item Description" /></span></div>
 

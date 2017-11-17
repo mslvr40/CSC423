@@ -320,7 +320,7 @@ Click the help icon above to learn more.
 
                       </div>
 
-                      <div class="one_half"><span class="wpcf7-form-control-wrap firstname">Promo Code<input type="text" readonly name = "promoCode" id = "promoCode" value = "<?php echo htmlspecialchars($code); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="PromoCode" /></span></div>
+                      <div class="one_half"><span class="wpcf7-form-control-wrap firstname">Promo Code<input style="background-color:lightgray;" type="text" readonly name = "promoCode" id = "promoCode" value = "<?php echo htmlspecialchars($code); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="PromoCode" /></span></div>
 
                       <div class="one_half"><span class="wpcf7-form-control-wrap firstname">Name<input type="text" name = "name" id = "name" value = "<?php echo htmlspecialchars($name); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" /></span></div>
 

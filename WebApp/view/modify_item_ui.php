@@ -122,7 +122,7 @@ Click the help icon above to learn more.
 <script type="text/javascript">
 
   function validateDes(){
-    
+
     if(document.getElementById("itemDescription").value==""){
       alert("Description is a required field!");
       return false;
@@ -157,7 +157,7 @@ Click the help icon above to learn more.
     return true;
   }
   function validateRetail(){
-      if(document.getElementById("itemRetailPrice").value==""){
+    if(document.getElementById("itemRetailPrice").value==""){
       alert("Retail Price is a required field");
       return false;
     }
@@ -276,7 +276,7 @@ Click the help icon above to learn more.
           </section>
           <!-- banner end -->
           <!-- content start -->
-          <div class="content row">
+          <div class="content row" id = "start">
             <div class="container">
               <div class="blog-content row">
 
@@ -286,224 +286,226 @@ Click the help icon above to learn more.
                   <h2>categories</h2>
                   <input type="hidden" value="0" id="myClassAdd" />
                   <ul class="list-cat">
-                   <li class='cat-item-all'><a href='./new_item_ui.php'>Insert new Item</a></li>  
-                 </li>
-                 <li class="cat-item cat-item-137"><a href="./search_item_ui.php" >Modify Existing Item</a>
-                 </li>
-                 <li class="cat-item cat-item-15"><a href="./new_promotion_ui.php" >Insert new Promotion</a>
-                 </li>
-                 <li class="cat-item cat-item-390"><a href="./search_promotion_ui.php" >Modify Existing Promotion</a>
-                 </li>
-                 <li class="cat-item cat-item-12"><a href="./new_adevent_ui.php" >Add new Ad Event</a>
-                 </li>
-                 <li class="cat-item cat-item-1"><a href="./search_adevent_ui.php" >Modify Existing Ad Event</a>
-                 </li>
+                    <li class='cat-item-all'><a href='./new_item_ui.php#start'>Insert new Item</a>
+                    </li> 
+                    <li class="cat-item cat-item-137"><a href="./search_item_ui.php#start" >Modify Existing Item</a>
+                    </li>
+                    <li class="cat-item cat-item-15"><a href="./new_promotion_ui.php#start" >Insert new Promotion</a>
+                    </li>
+                    <li class="cat-item cat-item-390"><a href="./search_promotion_ui.php#start" >Modify Existing Promotion</a>
+                    </li>
+                    <li class="cat-item cat-item-12"><a href="./new_adevent_ui.php#start" >Add new Ad Event</a>
+                    </li>
+                    <li class="cat-item cat-item-1"><a href="./search_adevent_ui.php#start" >Modify Existing Ad Event</a>
+                    </li>
+                    <li class="cat-item cat-item-1"><a href="./report_ui.php#start" >Reports</a>
+                    </li>
 
-               </ul>
-             </div>
-             <div class="right-side">
-              <!-- ####################Insert CSC423 Stuff here#############################-->
-
-
-              <section class="form-section row">
-
-                <div class="form-top-des">
-                  <h2>Modify Item</h2>
-
+                  </ul>
                 </div>
-                <?php 
-                $initNumber = $_POST['itemNumberInput'];
-                $initDescription = $_POST['itemDescriptionInput'];
-                $initCategory = $_POST['categoryInput'];
-                $initDepartment = $_POST['departmentNameInput'];
-                $initCost = $_POST['purchaseCostInput'];
-                $initRetail = $_POST['retailPriceInput'];
+                <div class="right-side">
+                  <!-- ####################Insert CSC423 Stuff here#############################-->
 
 
-                ?>
-                <form  action='../model/modify_item.php' onsubmit="return validateForm();" method='post'>
-                  <div style="display: none;">
+                  <section class="form-section row">
+
+                    <div class="form-top-des">
+                      <h2>Modify Item</h2>
+
+                    </div>
+                    <?php 
+                    $initNumber = $_POST['itemNumberInput'];
+                    $initDescription = $_POST['itemDescriptionInput'];
+                    $initCategory = $_POST['categoryInput'];
+                    $initDepartment = $_POST['departmentNameInput'];
+                    $initCost = $_POST['purchaseCostInput'];
+                    $initRetail = $_POST['retailPriceInput'];
+
+
+                    ?>
+                    <form  action='../model/modify_item.php' onsubmit="return validateForm();" method='post'>
+                      <div style="display: none;">
+
+                      </div>
+
+                      <div class="one_half"><span class="wpcf7-form-control-wrap firstname">Item Number<input type="text"readonly name = "itemNumber" id = "itemNumber" value = "<?php echo htmlspecialchars($initNumber); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Item Description" /></span></div>
+
+                      <div class="one_half"><span class="wpcf7-form-control-wrap firstname">Item Description<input type="text" name = "itemDescription" id = "itemDescription" value = "<?php echo htmlspecialchars($initDescription); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Item Description" /></span></div>
+
+
+
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+                      Category
+                      <div class="select-box"><span class="wpcf7-form-control-wrap typeOff"><select name="itemCategory" id ="itemCategory" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
+                        <option value="" rel = "select"  >Category</option>
+                        <option value="ACCESSORIES/FOOTWEAR" <?php if ($initCategory == 'ACCESSORIES/FOOTWEAR') echo "selected";?>  rel="acc">ACCESSORIES/FOOTWEAR</option>
+                        <option value="BASIC APPAREL" <?php if ($initCategory == 'BASIC APPAREL') echo "selected";?> rel = basic>BASIC APPAREL</option>
+                        <option value="FOOD CONVENIENCE" <?php if ($initCategory == 'FOOD CONVENIENCE') echo "selected";?> rel ="food">FOOD CONVENIENCE</option>
+                        <option value="FOOD GROCERY" <?php if ($initCategory == 'FOOD GROCERY') echo "selected";?> rel = "grocery">FOOD GROCERY</option>
+                      </select></span></div>
+
+                      Department
+                      <div class="select-box"><span class="wpcf7-form-control-
+                        wrap typeOff"><select name="itemDepartment" id = "itemDepartment" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
+                          <option class = "select"  value="" >Department</option>
+                          <option class = "acc" <?php if ($initDepartment == 'ACCESSORIES') echo "selected";?> value="ACCESSORIES">ACCESSORIES</option>
+                          <option class = "acc" <?php if ($initDepartment == 'FOOTWEAR') echo "selected";?> value="FOOTWEAR">FOOTWEAR</option>
+                          <option class = "basic"  <?php if ($initDepartment == 'CHILDRENS BASICS') echo "selected";?> value="CHILDRENS BASICS">CHILDRENS BASICS</option>
+                          <option class = "basic" <?php if ($initDepartment == 'LADIES BASICS') echo "selected";?> value = "LADIES BASICS">LADIES BASICS</option>
+                          <option class = "basic" <?php if ($initDepartment == 'MENS BASICS') echo "selected";?> value="MENS BASICS">MENS BASICS</option>
+                          <option class = "food" <?php if ($initDepartment == 'CANDY') echo "selected";?> value="CANDY">CANDY</option>
+                          <option class = "food" <?php if ($initDepartment == 'REFRIGIRATED') echo "selected";?> value="REFRIGIRATED">REFRIGIRATED</option>
+                          <option class = "grocery" <?php if ($initDepartment == 'COOKIES/CRACKERS') echo "selected";?> value="COOKIES/CRACKERS">COOKIES/CRACKERS</option>
+                          <option class = "grocery" <?php if ($initDepartment == 'GROCERY') echo "selected";?> value="GROCERY">GROCERY</option>
+                          <option class = "grocery" <?php if ($initDepartment == 'SALTY SNACKS') echo "selected";?> value="SALTY SNACKS">SALTY SNACKS</option>
+                        </select></span></div>  
+
+                        <script>
+                          $(document).ready(function(){
+                            var $cat = $('select[name=itemCategory]'),
+                            $items = $('select[name=itemDepartment]');
+
+                            $cat.change(function(){
+                              var $this = $(this).find(':selected'),
+                              rel = $this.attr('rel'),
+                              $set = $items.find('option.' + rel);
+
+                              if ($set.size() < 0) {
+                                $items.hide();
+                                return;
+                              }
+
+                              $items.show().find('option').hide();
+
+                              $set.show().first().prop('selected', true);
+                            });
+                          });
+                        </script>
+
+
+                        <table>
+                          <tr>
+
+                            <td style ="><div class="one_half last"><span class="wpcf7-form-control-wrap bussinessemail">Purchase Price<input type="text" min="1" step="any" name = "itemPurchaseCost" id = "itemPurchaseCost" value = "<?php echo htmlspecialchars($initCost); ?>" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" size="40" placeholder="Purchase Price" /></span></div></td>
+                            <td><div class="one_half"><span class="wpcf7-form-control-wrap companysize">Retail Price<input type="text" min="1" step="any" name = "itemRetailPrice" id = "itemRetailPrice" value = "<?php echo htmlspecialchars($initRetail); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" size="40" aria-required="true" aria-invalid="false" placeholder="Retail Price" /></span></div></td>
+                          </tr>
+                        </table>
+
+                        <div class="submit-action">
+
+                          <p>             <input type="submit" onclick="return validateForm();" value="Submit" class="wpcf7-form-control wpcf7-submit" />
+                          </p>
+                        </div>
+                      </form> 
+
+                    </section>
+
+
+
+                    &nbsp
+                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                   </div>
-
-                  <div class="one_half"><span class="wpcf7-form-control-wrap firstname">Item Number<input type="text"readonly name = "itemNumber" id = "itemNumber" value = "<?php echo htmlspecialchars($initNumber); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Item Description" /></span></div>
-
-                  <div class="one_half"><span class="wpcf7-form-control-wrap firstname">Item Description<input type="text" name = "itemDescription" id = "itemDescription" value = "<?php echo htmlspecialchars($initDescription); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Item Description" /></span></div>
-
-
-
-                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-
-                  Category
-                  <div class="select-box"><span class="wpcf7-form-control-wrap typeOff"><select name="itemCategory" id ="itemCategory" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
-                    <option value="" rel = "select"  >Category</option>
-                    <option value="ACCESSORIES/FOOTWEAR" <?php if ($initCategory == 'ACCESSORIES/FOOTWEAR') echo "selected";?>  rel="acc">ACCESSORIES/FOOTWEAR</option>
-                    <option value="BASIC APPAREL" <?php if ($initCategory == 'BASIC APPAREL') echo "selected";?> rel = basic>BASIC APPAREL</option>
-                    <option value="FOOD CONVENIENCE" <?php if ($initCategory == 'FOOD CONVENIENCE') echo "selected";?> rel ="food">FOOD CONVENIENCE</option>
-                    <option value="FOOD GROCERY" <?php if ($initCategory == 'FOOD GROCERY') echo "selected";?> rel = "grocery">FOOD GROCERY</option>
-                  </select></span></div>
-
-                  Department
-                  <div class="select-box"><span class="wpcf7-form-control-
-                    wrap typeOff"><select name="itemDepartment" id = "itemDepartment" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
-                      <option class = "select"  value="" >Department</option>
-                      <option class = "acc" <?php if ($initDepartment == 'ACCESSORIES') echo "selected";?> value="ACCESSORIES">ACCESSORIES</option>
-                      <option class = "acc" <?php if ($initDepartment == 'FOOTWEAR') echo "selected";?> value="FOOTWEAR">FOOTWEAR</option>
-                      <option class = "basic"  <?php if ($initDepartment == 'CHILDRENS BASICS') echo "selected";?> value="CHILDRENS BASICS">CHILDRENS BASICS</option>
-                      <option class = "basic" <?php if ($initDepartment == 'LADIES BASICS') echo "selected";?> value = "LADIES BASICS">LADIES BASICS</option>
-                      <option class = "basic" <?php if ($initDepartment == 'MENS BASICS') echo "selected";?> value="MENS BASICS">MENS BASICS</option>
-                      <option class = "food" <?php if ($initDepartment == 'CANDY') echo "selected";?> value="CANDY">CANDY</option>
-                      <option class = "food" <?php if ($initDepartment == 'REFRIGIRATED') echo "selected";?> value="REFRIGIRATED">REFRIGIRATED</option>
-                      <option class = "grocery" <?php if ($initDepartment == 'COOKIES/CRACKERS') echo "selected";?> value="COOKIES/CRACKERS">COOKIES/CRACKERS</option>
-                      <option class = "grocery" <?php if ($initDepartment == 'GROCERY') echo "selected";?> value="GROCERY">GROCERY</option>
-                      <option class = "grocery" <?php if ($initDepartment == 'SALTY SNACKS') echo "selected";?> value="SALTY SNACKS">SALTY SNACKS</option>
-                    </select></span></div>  
-
-                    <script>
-                      $(document).ready(function(){
-                        var $cat = $('select[name=itemCategory]'),
-                        $items = $('select[name=itemDepartment]');
-
-                        $cat.change(function(){
-                          var $this = $(this).find(':selected'),
-                          rel = $this.attr('rel'),
-                          $set = $items.find('option.' + rel);
-
-                          if ($set.size() < 0) {
-                            $items.hide();
-                            return;
-                          }
-
-                          $items.show().find('option').hide();
-
-                          $set.show().first().prop('selected', true);
-                        });
-                      });
-                    </script>
-
-
-                    <table>
-                      <tr>
-
-                        <td style ="><div class="one_half last"><span class="wpcf7-form-control-wrap bussinessemail">Purchase Price<input type="text" min="1" step="any" name = "itemPurchaseCost" id = "itemPurchaseCost" value = "<?php echo htmlspecialchars($initCost); ?>" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" size="40" placeholder="Purchase Price" /></span></div></td>
-                        <td><div class="one_half"><span class="wpcf7-form-control-wrap companysize">Retail Price<input type="text" min="1" step="any" name = "itemRetailPrice" id = "itemRetailPrice" value = "<?php echo htmlspecialchars($initRetail); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" size="40" aria-required="true" aria-invalid="false" placeholder="Retail Price" /></span></div></td>
-                      </tr>
-                    </table>
-
-                    <div class="submit-action">
-
-                      <p>             <input type="submit" onclick="return validateForm();" value="Submit" class="wpcf7-form-control wpcf7-submit" />
-                      </p>
-                    </div>
-                  </form> 
-
-                </section>
-
-
-
-                &nbsp
-                <br>
-
-
-
-
-
-
-
-
-
-
-
-
-
+                </div>
 
               </div>
             </div>
-
           </div>
-        </div>
-      </div>
 
-      <style type="text/css">
-      .mobilecat{float: left; width: 100%; margin-bottom: 20px;}.right-sidess {
-        float: right!important;
-        width: 90%!important;
-        margin-top: 60px;
-        }.blog-thumb{float:left;}.pg-num {
-          float: left;
-          width: 100%;
-          text-align: center;
-          margin: 10px 0px;
-          }a.page-numbers {
-            padding: 5px;
-          }
-        </style>
-        <!-- content end -->
+          <style type="text/css">
+          .mobilecat{float: left; width: 100%; margin-bottom: 20px;}.right-sidess {
+            float: right!important;
+            width: 90%!important;
+            margin-top: 60px;
+            }.blog-thumb{float:left;}.pg-num {
+              float: left;
+              width: 100%;
+              text-align: center;
+              margin: 10px 0px;
+              }a.page-numbers {
+                padding: 5px;
+              }
+            </style>
+            <!-- content end -->
 
 
-        <script>
-          var num = 0;
-          var post_set = "0";
+            <script>
+              var num = 0;
+              var post_set = "0";
 
-          jQuery("a.load-more").on('click', function(){
-            num++;
-            if(num < post_set){
-              jQuery(this).attr('data_offset', num);
-              var offset = jQuery(this).attr('data_offset');
-              jQuery.ajax({
-                type:"POST",
-                url: "https://goaptaris.com/wp-admin/admin-ajax.php",
-                data: {action: 'call_admin_ajax', offset:offset},
-                success:function(resp){
-                  $('.ajax_append').append(resp);
+              jQuery("a.load-more").on('click', function(){
+                num++;
+                if(num < post_set){
+                  jQuery(this).attr('data_offset', num);
+                  var offset = jQuery(this).attr('data_offset');
+                  jQuery.ajax({
+                    type:"POST",
+                    url: "https://goaptaris.com/wp-admin/admin-ajax.php",
+                    data: {action: 'call_admin_ajax', offset:offset},
+                    success:function(resp){
+                      $('.ajax_append').append(resp);
+                    }
+                  });
+                }else{
+                  jQuery(this).text("No More posts");
                 }
               });
-            }else{
-              jQuery(this).text("No More posts");
-            }
-          });
-        </script>
-        <script>
-          jQuery(document).ready(function(){
-            jQuery("#left-sidebar h2").click(function(){
-              var classStatus = jQuery("#myClassAdd").val();
-              jQuery(".list-cat").toggle();
-              if(classStatus != 0){
-                jQuery(".list-cat").removeClass("myClass");
-                jQuery("#myClassAdd").attr('value','0');
-              } else {
-                jQuery(".list-cat").addClass("myClass");
-                jQuery("#myClassAdd").attr('value','1');
-              }
-            });
-          });
-        </script>
-        <script type="text/javascript">
-          setInterval(function(){
-            if($('.form-section form').hasClass('sent')){
-              $('.form-top-des').hide();
-              $('.form-section').addClass('nopadding');
-            }
-          }, 100);
-        </script>
-        <style>
-        .blog-sm-desc h4 a, .blog-sm-desc p a { display: inline;}.right-sides{float:left;width:100%; margin-top: 60px;}
-      </style>
-      <!-- footer start -->
-      <footer class="footer row">
-        <div class="container">
-          <div class="upper-footer row">
-            <div class="line"></div>
-            <h2>Follow Us</h2>
-            <div class="social">
-              <div id="text-3" class="widget_text">     <div class="textwidget"><a target="_blank" href="https://twitter.com/goaptaris" class="icon1"></a>
-                <a target="_blank" href="https://www.facebook.com/Aptaris/" class="icon2"></a>
-                <a target="_blank" href="https://www.linkedin.com/company/aptaris" class="icon3"></a>
-                <a target="_blank" href="https://www.youtube.com/channel/UCaH0rZ7rvI6MQyOnUGTBSnQ" class="icon4"></a>
-                <!--<a href="#" class="icon5"></a>--></div>
-              </div>        </div>
-              <span>LAST TWEET</span>
-              <div id="twitter-2" class="widget_twitter"><div><h3><span class='twitterwidget twitterwidget-title'>Twitter: goaptaris</span></h3><ul><li><span class='entry-content'>"When people are treated right and feel valued, they work harder and play harder for their coaches"
+            </script>
+            <script>
+              jQuery(document).ready(function(){
+                jQuery("#left-sidebar h2").click(function(){
+                  var classStatus = jQuery("#myClassAdd").val();
+                  jQuery(".list-cat").toggle();
+                  if(classStatus != 0){
+                    jQuery(".list-cat").removeClass("myClass");
+                    jQuery("#myClassAdd").attr('value','0');
+                  } else {
+                    jQuery(".list-cat").addClass("myClass");
+                    jQuery("#myClassAdd").attr('value','1');
+                  }
+                });
+              });
+            </script>
+            <script type="text/javascript">
+              setInterval(function(){
+                if($('.form-section form').hasClass('sent')){
+                  $('.form-top-des').hide();
+                  $('.form-section').addClass('nopadding');
+                }
+              }, 100);
+            </script>
+            <style>
+            .blog-sm-desc h4 a, .blog-sm-desc p a { display: inline;}.right-sides{float:left;width:100%; margin-top: 60px;}
+          </style>
+          <!-- footer start -->
+          <footer class="footer row">
+            <div class="container">
+              <div class="upper-footer row">
+                <div class="line"></div>
+                <h2>Follow Us</h2>
+                <div class="social">
+                  <div id="text-3" class="widget_text">     <div class="textwidget"><a target="_blank" href="https://twitter.com/goaptaris" class="icon1"></a>
+                    <a target="_blank" href="https://www.facebook.com/Aptaris/" class="icon2"></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/aptaris" class="icon3"></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCaH0rZ7rvI6MQyOnUGTBSnQ" class="icon4"></a>
+                    <!--<a href="#" class="icon5"></a>--></div>
+                  </div>        </div>
+                  <span>LAST TWEET</span>
+                  <div id="twitter-2" class="widget_twitter"><div><h3><span class='twitterwidget twitterwidget-title'>Twitter: goaptaris</span></h3><ul><li><span class='entry-content'>"When people are treated right and feel valued, they work harder and play harder for their coaches"
 <a href="https://t.co/t0Ysg2yIVE">https://t.co/t0Ysg2yIVE</a></span> <span class='entry-meta'><span class='time-meta'><a href="http://twitter.com/GoAptaris/statuses/795701676124545024">about 11 months ago</a></span> <span class='from-meta'>from <a href="http://www.hootsuite.com" rel="nofollow">Hootsuite</a></span></span> <span class="intent-meta"><a href="http://twitter.com/intent/tweet?in_reply_to=795701676124545024" data-lang="en" class="in-reply-to" title="Reply">Reply</a><a href="http://twitter.com/intent/retweet?tweet_id=795701676124545024" data-lang="en" class="retweet" title="Retweet">Retweet</a><a href="http://twitter.com/intent/favorite?tweet_id=795701676124545024" data-lang="en" class="favorite" title="Favorite">Favorite</a></span></li></ul></div></div>       <!--<p>Dutch Startupmap - All startups from Holland in one map #startups #aanmelen #handig
     http://t.co/skGG4JA3 via@sharethis</p>
     <a href="#" class="whoo">@whoopaa</a> -->

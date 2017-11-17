@@ -120,7 +120,7 @@ Click the help icon above to learn more.
 }
 </style>
 <script type="text/javascript">
-  
+
   function valPromoName(){
     if(document.getElementById("name").value==""){
       alert("Promotion Name is a required field!");
@@ -268,7 +268,7 @@ Click the help icon above to learn more.
           </section>
           <!-- banner end -->
           <!-- content start -->
-          <div class="content row">
+          <div class="content row" id = "start">
             <div class="container">
               <div class="blog-content row">
 
@@ -278,171 +278,173 @@ Click the help icon above to learn more.
                   <h2>categories</h2>
                   <input type="hidden" value="0" id="myClassAdd" />
                   <ul class="list-cat">
-                   <li class='cat-item-all'><a href='./new_item_ui.php'>Insert new Item</a></li>  
-                 </li>
-                 <li class="cat-item cat-item-137"><a href="./search_item_ui.php" >Modify Existing Item</a>
-                 </li>
-                 <li class="cat-item cat-item-15"><a href="./new_promotion_ui.php" >Insert new Promotion</a>
-                 </li>
-                 <li class="cat-item cat-item-390"><a href="./search_promotion_ui.php" >Modify Existing Promotion</a>
-                 </li>
-                 <li class="cat-item cat-item-12"><a href="./new_adevent_ui.php" >Add new Ad Event</a>
-                 </li>
-                 <li class="cat-item cat-item-1"><a href="./search_adevent_ui.php" >Modify Existing Ad Event</a>
-                 </li>
+                    <li class='cat-item-all'><a href='./new_item_ui.php#start'>Insert new Item</a>
+                    </li> 
+                    <li class="cat-item cat-item-137"><a href="./search_item_ui.php#start" >Modify Existing Item</a>
+                    </li>
+                    <li class="cat-item cat-item-15"><a href="./new_promotion_ui.php#start" >Insert new Promotion</a>
+                    </li>
+                    <li class="cat-item cat-item-390"><a href="./search_promotion_ui.php#start" >Modify Existing Promotion</a>
+                    </li>
+                    <li class="cat-item cat-item-12"><a href="./new_adevent_ui.php#start" >Add new Ad Event</a>
+                    </li>
+                    <li class="cat-item cat-item-1"><a href="./search_adevent_ui.php#start" >Modify Existing Ad Event</a>
+                    </li>
+                    <li class="cat-item cat-item-1"><a href="./report_ui.php#start" >Reports</a>
+                    </li>
 
-               </ul>
-             </div>
-             <div class="right-side">
-              <!-- ####################Insert CSC423 Stuff here#############################-->
-
-
-              <section class="form-section row">
-
-                <div class="form-top-des">
-                  <h2>Modify Promotion</h2>
-
+                  </ul>
                 </div>
-                <?php 
-                $code = $_POST['promoCodeInput'];
-                $name = $_POST['promoNameInput'];
-                $description = $_POST['descriptionInput'];
-                $amount = $_POST['amountOffInput'];
-                $type = $_POST['promoTypeInput'];
+                <div class="right-side">
+                  <!-- ####################Insert CSC423 Stuff here#############################-->
+
+
+                  <section class="form-section row">
+
+                    <div class="form-top-des">
+                      <h2>Modify Promotion</h2>
+
+                    </div>
+                    <?php 
+                    $code = $_POST['promoCodeInput'];
+                    $name = $_POST['promoNameInput'];
+                    $description = $_POST['descriptionInput'];
+                    $amount = $_POST['amountOffInput'];
+                    $type = $_POST['promoTypeInput'];
 
 
 
-                ?>
-                <form  action='../model/modify_promotion.php' onsubmit="return valForm()" method='post'>
-                  <div style="display: none;">
+                    ?>
+                    <form  action='../model/modify_promotion.php' onsubmit="return valForm()" method='post'>
+                      <div style="display: none;">
+
+                      </div>
+
+                      <div class="one_half"><span class="wpcf7-form-control-wrap firstname">Promo Code<input type="text" readonly name = "promoCode" id = "promoCode" value = "<?php echo htmlspecialchars($code); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="PromoCode" /></span></div>
+
+                      <div class="one_half"><span class="wpcf7-form-control-wrap firstname">Name<input type="text" name = "name" id = "name" value = "<?php echo htmlspecialchars($name); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" /></span></div>
+
+                      <div class="one_half last"><span class="wpcf7-form-control-wrap lastname">Description<input type="text" name = "description" id = "description" value = "<?php echo htmlspecialchars($description); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Description" /></span></div>
+                      <div class="one_half"><span class="wpcf7-form-control-wrap tele">Amount Off<input type="text" name = "amount" id = "amount" value = "<?php echo htmlspecialchars($amount); ?>" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Amount" /></span></div>
+                      <div class="select-box"><span class="wpcf7-form-control-wrap typeOff"><select name="typeOff" id="typeOff" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
+                        <option value="Type of discount">Type of discount</option>
+                        <option value="Percent" <?php if($type == "Percent"){ ?> selected="selected" <?php } ?> >PERCENT</option>
+                        <option value="Dollar" <?php if($type == "Dollar"){ ?> selected="selected" <?php } ?> >DOLLAR</option></select></span></div>
+
+                        <div class="submit-action">
+
+                          <p>             <input type="submit" value="Submit" onclick="return valForm()" class="wpcf7-form-control wpcf7-submit" />
+                          </p>
+                        </div>
+                      </form> 
+
+                    </section>
+
+
+
+                    &nbsp
+                    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                   </div>
+                </div>
 
-                  <div class="one_half"><span class="wpcf7-form-control-wrap firstname">Promo Code<input type="text" readonly name = "promoCode" id = "promoCode" value = "<?php echo htmlspecialchars($code); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="PromoCode" /></span></div>
-
-                  <div class="one_half"><span class="wpcf7-form-control-wrap firstname">Name<input type="text" name = "name" id = "name" value = "<?php echo htmlspecialchars($name); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" /></span></div>
-
-                  <div class="one_half last"><span class="wpcf7-form-control-wrap lastname">Description<input type="text" name = "description" id = "description" value = "<?php echo htmlspecialchars($description); ?>" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Description" /></span></div>
-                  <div class="one_half"><span class="wpcf7-form-control-wrap tele">Amount Off<input type="text" name = "amount" id = "amount" value = "<?php echo htmlspecialchars($amount); ?>" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Amount" /></span></div>
-                    <div class="select-box"><span class="wpcf7-form-control-wrap typeOff"><select name="typeOff" id="typeOff" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
-          <option value="Type of discount">Type of discount</option>
-          <option value="Percent" <?php if($type == "Percent"){ ?> selected="selected" <?php } ?> >PERCENT</option>
-          <option value="Dollar" <?php if($type == "Dollar"){ ?> selected="selected" <?php } ?> >DOLLAR</option></select></span></div>
-
-                  <div class="submit-action">
-
-                    <p>             <input type="submit" value="Submit" onclick="return valForm()" class="wpcf7-form-control wpcf7-submit" />
-                    </p>
-                  </div>
-                </form> 
-
-              </section>
-
-
-
-              &nbsp
-              <br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+              </div>
             </div>
           </div>
-          
-        </div>
-      </div>
-    </div>
 
-    <style type="text/css">
-    .mobilecat{float: left; width: 100%; margin-bottom: 20px;}.right-sidess {
-      float: right!important;
-      width: 90%!important;
-      margin-top: 60px;
-      }.blog-thumb{float:left;}.pg-num {
-        float: left;
-        width: 100%;
-        text-align: center;
-        margin: 10px 0px;
-        }a.page-numbers {
-          padding: 5px;
-        }
-      </style>
-      <!-- content end -->
-
-
-      <script>
-        var num = 0;
-        var post_set = "0";
-
-        jQuery("a.load-more").on('click', function(){
-          num++;
-          if(num < post_set){
-            jQuery(this).attr('data_offset', num);
-            var offset = jQuery(this).attr('data_offset');
-            jQuery.ajax({
-              type:"POST",
-              url: "https://goaptaris.com/wp-admin/admin-ajax.php",
-              data: {action: 'call_admin_ajax', offset:offset},
-              success:function(resp){
-                $('.ajax_append').append(resp);
+          <style type="text/css">
+          .mobilecat{float: left; width: 100%; margin-bottom: 20px;}.right-sidess {
+            float: right!important;
+            width: 90%!important;
+            margin-top: 60px;
+            }.blog-thumb{float:left;}.pg-num {
+              float: left;
+              width: 100%;
+              text-align: center;
+              margin: 10px 0px;
+              }a.page-numbers {
+                padding: 5px;
               }
-            });
-          }else{
-            jQuery(this).text("No More posts");
-          }
-        });
-      </script>
-      <script>
-        jQuery(document).ready(function(){
-          jQuery("#left-sidebar h2").click(function(){
-            var classStatus = jQuery("#myClassAdd").val();
-            jQuery(".list-cat").toggle();
-            if(classStatus != 0){
-              jQuery(".list-cat").removeClass("myClass");
-              jQuery("#myClassAdd").attr('value','0');
-            } else {
-              jQuery(".list-cat").addClass("myClass");
-              jQuery("#myClassAdd").attr('value','1');
-            }
-          });
-        });
-      </script>
-      <script type="text/javascript">
-        setInterval(function(){
-          if($('.form-section form').hasClass('sent')){
-            $('.form-top-des').hide();
-            $('.form-section').addClass('nopadding');
-          }
-        }, 100);
-      </script>
-      <style>
-      .blog-sm-desc h4 a, .blog-sm-desc p a { display: inline;}.right-sides{float:left;width:100%; margin-top: 60px;}
-    </style>
-    <!-- footer start -->
-    <footer class="footer row">
-      <div class="container">
-        <div class="upper-footer row">
-          <div class="line"></div>
-          <h2>Follow Us</h2>
-          <div class="social">
-            <div id="text-3" class="widget_text">     <div class="textwidget"><a target="_blank" href="https://twitter.com/goaptaris" class="icon1"></a>
-              <a target="_blank" href="https://www.facebook.com/Aptaris/" class="icon2"></a>
-              <a target="_blank" href="https://www.linkedin.com/company/aptaris" class="icon3"></a>
-              <a target="_blank" href="https://www.youtube.com/channel/UCaH0rZ7rvI6MQyOnUGTBSnQ" class="icon4"></a>
-              <!--<a href="#" class="icon5"></a>--></div>
-            </div>        </div>
-            <span>LAST TWEET</span>
-            <div id="twitter-2" class="widget_twitter"><div><h3><span class='twitterwidget twitterwidget-title'>Twitter: goaptaris</span></h3><ul><li><span class='entry-content'>"When people are treated right and feel valued, they work harder and play harder for their coaches"
+            </style>
+            <!-- content end -->
+
+
+            <script>
+              var num = 0;
+              var post_set = "0";
+
+              jQuery("a.load-more").on('click', function(){
+                num++;
+                if(num < post_set){
+                  jQuery(this).attr('data_offset', num);
+                  var offset = jQuery(this).attr('data_offset');
+                  jQuery.ajax({
+                    type:"POST",
+                    url: "https://goaptaris.com/wp-admin/admin-ajax.php",
+                    data: {action: 'call_admin_ajax', offset:offset},
+                    success:function(resp){
+                      $('.ajax_append').append(resp);
+                    }
+                  });
+                }else{
+                  jQuery(this).text("No More posts");
+                }
+              });
+            </script>
+            <script>
+              jQuery(document).ready(function(){
+                jQuery("#left-sidebar h2").click(function(){
+                  var classStatus = jQuery("#myClassAdd").val();
+                  jQuery(".list-cat").toggle();
+                  if(classStatus != 0){
+                    jQuery(".list-cat").removeClass("myClass");
+                    jQuery("#myClassAdd").attr('value','0');
+                  } else {
+                    jQuery(".list-cat").addClass("myClass");
+                    jQuery("#myClassAdd").attr('value','1');
+                  }
+                });
+              });
+            </script>
+            <script type="text/javascript">
+              setInterval(function(){
+                if($('.form-section form').hasClass('sent')){
+                  $('.form-top-des').hide();
+                  $('.form-section').addClass('nopadding');
+                }
+              }, 100);
+            </script>
+            <style>
+            .blog-sm-desc h4 a, .blog-sm-desc p a { display: inline;}.right-sides{float:left;width:100%; margin-top: 60px;}
+          </style>
+          <!-- footer start -->
+          <footer class="footer row">
+            <div class="container">
+              <div class="upper-footer row">
+                <div class="line"></div>
+                <h2>Follow Us</h2>
+                <div class="social">
+                  <div id="text-3" class="widget_text">     <div class="textwidget"><a target="_blank" href="https://twitter.com/goaptaris" class="icon1"></a>
+                    <a target="_blank" href="https://www.facebook.com/Aptaris/" class="icon2"></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/aptaris" class="icon3"></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCaH0rZ7rvI6MQyOnUGTBSnQ" class="icon4"></a>
+                    <!--<a href="#" class="icon5"></a>--></div>
+                  </div>        </div>
+                  <span>LAST TWEET</span>
+                  <div id="twitter-2" class="widget_twitter"><div><h3><span class='twitterwidget twitterwidget-title'>Twitter: goaptaris</span></h3><ul><li><span class='entry-content'>"When people are treated right and feel valued, they work harder and play harder for their coaches"
 <a href="https://t.co/t0Ysg2yIVE">https://t.co/t0Ysg2yIVE</a></span> <span class='entry-meta'><span class='time-meta'><a href="http://twitter.com/GoAptaris/statuses/795701676124545024">about 11 months ago</a></span> <span class='from-meta'>from <a href="http://www.hootsuite.com" rel="nofollow">Hootsuite</a></span></span> <span class="intent-meta"><a href="http://twitter.com/intent/tweet?in_reply_to=795701676124545024" data-lang="en" class="in-reply-to" title="Reply">Reply</a><a href="http://twitter.com/intent/retweet?tweet_id=795701676124545024" data-lang="en" class="retweet" title="Retweet">Retweet</a><a href="http://twitter.com/intent/favorite?tweet_id=795701676124545024" data-lang="en" class="favorite" title="Favorite">Favorite</a></span></li></ul></div></div>       <!--<p>Dutch Startupmap - All startups from Holland in one map #startups #aanmelen #handig
     http://t.co/skGG4JA3 via@sharethis</p>
     <a href="#" class="whoo">@whoopaa</a> -->

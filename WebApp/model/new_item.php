@@ -4,7 +4,6 @@
 <body>
 
 	<?php
-	require('../view/new_item_result.inc');
 	require('../db.inc');
 
 	insert_teacher();
@@ -40,7 +39,8 @@
 		}
 
 
-		show_item_result($message);
+		echo '<form method = "POST" action = "../view/new_item_result.php"> <input name = "message" type = "hidden" value = "'. htmlentities($message) . '"/>
+		<script> document.getElementsByTagName("form")[0].submit()</script>';
 
 	}
 

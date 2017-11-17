@@ -4,7 +4,6 @@
 <body>
 
 	<?php
-	require('../view/add_promo_to_item_result.inc');
 	require('../db.inc');
 
 	insert_promotionItem();
@@ -30,7 +29,7 @@
 		elseif($promo['PromoType'] == "Percent"){
 			$newPrice = $item["PurchaseCost"] - ( $item["PurchaseCost"] * $promo["AmountOff"]);
 		}
-			
+		
 
 
 		if($newPrice<0){
@@ -60,7 +59,8 @@
 		}
 
 
-		show_promoItem_result($message);
+		echo '<form method = "POST" action = "../view/add_promo_to_item_result.php"> <input name = "message" type = "hidden" value = "'. htmlentities($message) . '"/>
+		<script> document.getElementsByTagName("form")[0].submit()</script>';
 
 	}
 

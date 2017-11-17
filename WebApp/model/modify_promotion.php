@@ -4,7 +4,6 @@
 <body>
 	
 	<?php
-	require('../view/modify_item_result.inc');
 	require('../db.inc');
 
 	insert_teacher();
@@ -19,11 +18,11 @@
 		$description = mysql_real_escape_string($_POST['description']);
 		$amount = mysql_real_escape_string($_POST['amount']);
 		$type = mysql_real_escape_string($_POST['typeOff']);
-	
+
 		
 
 		$query = "UPDATE Promotion SET Name = '$name', Description = '$description', AmountOff = '$amount',
-				PromoType = '$type' WHERE  PromoCode = '$code'";
+		PromoType = '$type' WHERE  PromoCode = '$code'";
 		
 		
 
@@ -40,8 +39,8 @@
 			$message = "Promotion $code: $nameMessage: was modified successfully.";
 			
 		}
-		
-		show_item_result($message);
+		echo '<form method = "POST" action = "../view/modify_promotion_result.php"> <input name = "message" type = "hidden" value = "'. htmlentities($message) . '"/>
+		<script> document.getElementsByTagName("form")[0].submit()</script>';
 		
 	}
 

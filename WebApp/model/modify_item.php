@@ -4,7 +4,6 @@
 <body>
 	
 	<?php
-	require('../view/modify_item_result.inc');
 	require('../db.inc');
 
 	insert_teacher();
@@ -23,7 +22,7 @@
 		
 
 		$query = "UPDATE Item SET ItemDescription = '$description', Category = '$category', DepartmentName = '$department',
-				PurchaseCost = '$purchaseCost', FullRetailPrice = '$retailPrice' WHERE  itemNumber = $number";
+		PurchaseCost = '$purchaseCost', FullRetailPrice = '$retailPrice' WHERE  itemNumber = $number";
 		
 		
 
@@ -41,7 +40,8 @@
 			
 		}
 		
-		show_item_result($message);
+		echo '<form method = "POST" action = "../view/modify_item_result.php"> <input name = "message" type = "hidden" value = "'. htmlentities($message) . '"/>
+		<script> document.getElementsByTagName("form")[0].submit()</script>';
 		
 	}
 

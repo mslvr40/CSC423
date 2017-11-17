@@ -5,53 +5,61 @@ function show_report1_result($result, $output, $date)
 
 	echo "<HTML>";
 	echo "<HEAD>";
+	echo '<style>
+{
+  box-sizing: border-box;
+}
+
+
+
+#myTable {
+  border-collapse: collapse;
+  width: 50%;
+  border: 1px solid #ddd;
+  font-size: 12px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>';
 	echo "</HEAD>";
 	echo "<BODY>";
-
-	echo "<script type='text/javascript'>alert('a');</script>";
-	if ($message)
-	{
-		if ($message != "")
-		{
-			echo '<center><font color="blue">'.$message.'</font></center><br />';
-		}
-	}
 
 	echo '
 	<BR/><BR/>
 	<center>
-	<table border = "2">
+	<table id = "myTable" border = "1">
 	<tr>
 	<th>Promotion Name</th>
 	<th>Event Name</th>
 	</tr>';
-	echo "<script type='text/javascript'>alert('b');</script>";
 	while($row = mysql_fetch_array ($result)){
 		echo'
 		<tr>
 		<td>'.htmlspecialchars ($row [0]).'</td>
 		<td>'.htmlspecialchars ($row [1]).'</td>
-		</tr>
-		<script type="text/javascript">alert("c");</script>';
+		</tr>';
 	}
 
+echo <<<UPTOEND
 
-
-
-
-
-
-
-
-	echo <<<UPTOEND
-	<BR/><BR/>
-	<center>
-	<input type="button" value="Return to Main Menu" 
+  <input type="button" value="Return to Main Menu" 
 	onClick="window.location='../view/index.html'"/>
-	</center>
-	UPTOEND;
+ 
+UPTOEND;
 
 	echo "</BODY>";
 	echo "</HTML>";
+
 }
 ?>

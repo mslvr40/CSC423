@@ -279,7 +279,7 @@ Click the help icon above to learn more.
                     ?>
                     <?php if(isset($_POST['itemNumberInput'])) 
                     { ?>
-                      <form  action='../model/add_promo_to_item.php' method='POST'>
+                      <form  action='../model/add_promo_to_item.php#start' method='POST'>
                         <input type="hidden" name="itemId" value="<?php echo htmlspecialchars($_POST['itemNumberInput']); ?>">
                         <?php } else { ?>
                         <form  action='modify_promotion_ui.php#start' method='POST'>

@@ -131,6 +131,15 @@ Click the help icon above to learn more.
 		}
 		return true;
 	}
+	function valAdDate(){
+		var startDate = document.getElementById("AdStart").value;
+		var endDate = document.getElemendById("AdEnd").value;
+		if((new Date(startDate).getTime() > new Date(endDate).getTime())){
+			alert("Start Date cannot be after End Date!");
+			return false;
+		}
+		return true;
+	}
 	
 	function validateForm() {
 
@@ -142,6 +151,9 @@ Click the help icon above to learn more.
 		}
 		if(!valAdDesc()){
 			return false;
+		}
+		if(!valAdDate()){
+		   	return false;
 		}
 		return true;
 	}

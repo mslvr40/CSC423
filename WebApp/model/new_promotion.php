@@ -29,7 +29,7 @@
 			$message = "Promotion $id: $nameMessage: inserted successfully.";
 		}
 
-		echo '<form method = "POST" action = "../view/new_promotion_result.php"> <input name = "message" type = "hidden" value = "'. htmlentities($message) . '"/>
+		echo '<form method = "POST" action = "../view/new_promotion_result.php#start"> <input name = "message" type = "hidden" value = "'. htmlentities($message) . '"/>
 		<script> document.getElementsByTagName("form")[0].submit()</script>';
 
 	}

@@ -105,7 +105,7 @@ Click the help icon above to learn more.
 
 	function valAdCode(){
 		
-    var adCodeRegex = new RegExp("^[A-Za-z \d]*$");
+    var adCodeRegex = new RegExp("^[A-Za-z0-9]*$");
     
 		if(document.getElementById("AdCode").value==""){
 			alert("Ad Event Code is required!");
@@ -133,7 +133,7 @@ Click the help icon above to learn more.
 	}
 	function valAdDate(){
 		var startDate = document.getElementById("AdStart").value;
-		var endDate = document.getElemendById("AdEnd").value;
+		var endDate = document.getElementById("AdEnd").value;
 		if((new Date(startDate).getTime() > new Date(endDate).getTime())){
 			alert("Start Date cannot be after End Date!");
 			return false;

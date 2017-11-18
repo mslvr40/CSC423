@@ -271,7 +271,7 @@ Click the help icon above to learn more.
 										<div class="form-top-des">
 											<h2>Add A New Promotion</h2>
 										</div>
-										<form action='../model/new_promotion.php' onsubmit="return valForm()" method='post'>
+										<form action='../model/new_promotion.php#start' onsubmit="return valForm()" method='post'>
 											<div style="display: none;">
 
 											</div>

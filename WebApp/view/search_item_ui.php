@@ -277,7 +277,7 @@ Click the help icon above to learn more.
 
                   while($row = mysql_fetch_Array($result)) {
                     ?>
-                    <form id = "<?php echo htmlspecialchars($row['ItemNumber']); ?>" action='modify_item_ui.php' method='POST'>
+                    <form id = "<?php echo htmlspecialchars($row['ItemNumber']); ?>" action='modify_item_ui.php#start' method='POST'>
                       <tr>
                         <td>  <input type="hidden" name="itemNumberInput" value="<?php echo htmlspecialchars($row['ItemNumber']); ?>"> <?php echo $row['ItemNumber']; ?> </td>
 
@@ -297,10 +297,10 @@ Click the help icon above to learn more.
                          <script>
                           function clickMe(i, frm){
                             if(i==1){
-                              document.getElementById(frm).action="modify_item_ui";
+                              document.getElementById(frm).action="modify_item_ui#start";
                             }
                             if(i==2){
-                              document.getElementById(frm).action="search_promotion_ui.php";
+                              document.getElementById(frm).action="search_promotion_ui.php#start";
                             }
                             document.getElementById(frm).submit();
 

@@ -285,7 +285,7 @@ Click the help icon above to learn more.
 											<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 										</div>
-										<form  action='../model/new_item.php' onsubmit="return validateForm()" method='post'>
+										<form  action='../model/new_item.php#start' onsubmit="return validateForm()" method='post'>
 											<div style="display: none;">
 
 											</div>

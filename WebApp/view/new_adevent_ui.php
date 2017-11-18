@@ -53,6 +53,13 @@
 		background: none !important;
 		padding: 0 !important;
 	}
+	table.date {
+		margin-bottom: 5px;
+	}
+	table.date td {
+		CELLSPACING=3;
+	}
+		
 </style>
 <link rel='stylesheet' id='contact-form-7-css'  href='https://goaptaris.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.9' media='all' />
 <link rel='stylesheet' id='reset-css'  href='https://goaptaris.com/wp-content/themes/aptaris/css/reset.css?ver=4.8.2' media='all' />
@@ -268,16 +275,16 @@ Click the help icon above to learn more.
 											<div class="one_half"><span class="wpcf7-form-control-wrap AdCode"><input type="text" id = "AdCode" name="AdCode" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Event Code" /></span></div>
                       <div class="one_half"><span class="wpcf7-form-control-wrap AdName"><input type="text" id = "AdName" name="AdName" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Ad Name" /></span></div>
                       
-                      	<table>
+                      	<table class='date'>
 													<tr>
-														<td style ="><div class="one_half last"><span class="wpcf7-form-control-wrap bussinessemail"><input type="date" min="1" step="any" id =  "AdStart" name = "AdStart" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Ad Start Date" /></span></div></td>
-														<td><div class="one_half"><span class="wpcf7-form-control-wrap companysize"><input type="date" min="1" step="any" id="AdEnd" name="AdEnd" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Ad End Date" /></span></div></td>
+														<td style ="><div class="one_half last"><span class="wpcf7-form-control-wrap bussinessemail">Ad Start :  <input type="date" min="1" step="any" id =  "AdStart" name = "AdStart" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span></div></td>
+														<td><div class="one_half"><span class="wpcf7-form-control-wrap companysize">Ad End :  <input type="date" min="1" step="any" id="AdEnd" name="AdEnd" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span></div></td>
 													</tr>
 												</table>
                       
                       <div class="one_half"><span class="wpcf7-form-control-wrap AdDesc"><input type="text" id = "AdDesc" name="AdDesc" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Ad Description" /></span></div>
 											<div class="select-box"><span class="wpcf7-form-control-wrap AdType"><select id = "AdEventType" name="AdEventType" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
-												<option value="" rel = "select"  selected>Type</option>
+												<option value="" rel = "select"  disabled selected>Type</option>
 												<option value="Planner" rel="planner">Planner</option>
 												<option value="Circular" rel = circ>Circular</option>
 												<option value="PassOut" rel ="passout">PassOut</option>

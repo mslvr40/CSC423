@@ -323,7 +323,7 @@ Click the help icon above to learn more.
 
 
                     ?>
-                    <form  action='../model/modify_item.php' onsubmit="return validateForm();" method='post'>
+                    <form  action='../model/modify_item.php#start' onsubmit="return validateForm();" method='post'>
                       <div style="display: none;">
 
                       </div>

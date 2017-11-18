@@ -54,7 +54,7 @@
 		padding: 0 !important;
 	}
 	table.date {
-		margin-bottom: 5px;
+		margin-bottom: 20px;
 	}
 	table.date td {
 		CELLSPACING=3;

@@ -40,7 +40,7 @@
 			
 		}
 		
-		echo '<form method = "POST" action = "../view/modify_item_result.php"> <input name = "message" type = "hidden" value = "'. htmlentities($message) . '"/>
+		echo '<form method = "POST" action = "../view/modify_item_result.php#start"> <input name = "message" type = "hidden" value = "'. htmlentities($message) . '"/>
 		<script> document.getElementsByTagName("form")[0].submit()</script>';
 		
 	}

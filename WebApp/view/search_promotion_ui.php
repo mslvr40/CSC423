@@ -282,7 +282,7 @@ Click the help icon above to learn more.
                       <form  action='../model/add_promo_to_item.php' method='POST'>
                         <input type="hidden" name="itemId" value="<?php echo htmlspecialchars($_POST['itemNumberInput']); ?>">
                         <?php } else { ?>
-                        <form  action='modify_promotion_ui.php' method='POST'>
+                        <form  action='modify_promotion_ui.php#start' method='POST'>
                           <?php } ?>
                           <tr>
                             <td>  <input type="hidden" name="promoCodeInput" value="<?php echo htmlspecialchars($row['PromoCode']); ?>"> <?php echo $row['PromoCode']; ?> </td>

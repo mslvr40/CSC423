@@ -26,7 +26,7 @@
 		}
 		else
 		{
-			$message = "AdEvent $id: $desMessage inserted successfully.";
+			$message = "AdEvent $adCode: $desMessage inserted successfully.";
 		}
 		echo '<form method = "POST" action = "../view/new_adevent_result.php#start"> <input name = "message" type = "hidden" value = "'. htmlentities($message) . '"/>
 		<script> document.getElementsByTagName("form")[0].submit()</script>';

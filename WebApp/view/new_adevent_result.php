@@ -1,5 +1,5 @@
 <?php
-function show_adevent_result($message, $adCode, $adName, $adName, $adStart, $adEnd, $adDesc, $adEventType)
+function show_adevent_result($message, $adCode, $adName, $adStart, $adEnd, $adDesc, $adEventType)
 {
   echo "<HTML>";
   echo "<HEAD>";

@@ -9,8 +9,8 @@
 	{
 		connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
 		$desMessage = $_POST['AdDesc'];
-    $adCode = mysql_real_escape_string($_POST['AdCode']);
-    $adName = mysql_real_escape_string($_POST['AdName']);
+		$adCode = mysql_real_escape_string($_POST['AdCode']);
+		$adName = mysql_real_escape_string($_POST['AdName']);
 		$adStart = mysql_real_escape_string($_POST['AdStart']);
 		$adEnd = mysql_real_escape_string($_POST['AdEnd']);
 		$adDesc = mysql_real_escape_string($_POST['AdDesc']);

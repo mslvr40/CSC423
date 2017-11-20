@@ -282,7 +282,7 @@ Click the help icon above to learn more.
                       <form  action='../model/add_promo_to_item.php#start' method='POST'>
                         <input type="hidden" name="itemId" value="<?php echo htmlspecialchars($_POST['itemNumberInput']); ?>">
                         <?php } else { ?>
-                        <form  action='modify_promotion_ui.php#start' method='POST'>
+                        <form  id = "<?php echo htmlspecialchars($row['PromoCode']); ?>" method='POST'>
                           <?php } ?>
                           <tr>
                             <td>  <input type="hidden" name="promoCodeInput" value="<?php echo htmlspecialchars($row['PromoCode']); ?>"> <?php echo $row['PromoCode']; ?> </td>
@@ -299,154 +299,167 @@ Click the help icon above to learn more.
                             { ?>
                               <td> <input type = 'submit'  value='Add Promotion'>
                                 <?php } else { ?>
-                                <td> <input type = 'submit' value='Modify Promotion'>
-                                  <?php } ?>
-                                </tr>
-                              </form>
+                                <td> <input type = 'button' onClick="clickMe(1, <?php echo htmlspecialchars($row['PromoCode']); ?>)" value='Modify'>
+                                 <input type = 'button' onClick="clickMe(2, <?php echo htmlspecialchars($row['PromoCode']); ?>)" value='Add to Ad/Event '>
+                                 <?php } ?>
+                               </tr>
+                             </form>
 
-                              <?php } ?>
+                             <?php } ?>
 
-
-
-                            </table>
-
-
-                            <script>
-
-                              function searchAll() {
-                                var i1, i2, i3, i4, table, tr, tds;
-                                i1 = document.getElementById("numInput").value.toUpperCase();
-                                i2 = document.getElementById("nameInput").value.toUpperCase();
-                                i3 = document.getElementById("desInput").value.toUpperCase();
-
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                for (i = 1; i < tr.length; i++) {
-
-                                  tds = tr[i].getElementsByTagName("td");
-                                  var firstCol, secondCol, thirdCol
-                                  if(tds[0]){
-                                   firstCol = tds[0].textContent.toUpperCase();
-                                 }
-                                 else {
-                                  firstCol="";
+                             <script>
+                              function clickMe(i, frm){
+                                if(i==1){
+                                  document.getElementById(frm).action="modify_promotion_ui#start";
                                 }
-                                if(tds[1]){
-                                  secondCol = tds[1].textContent.toUpperCase();
+                                if(i==2){
+                                  document.getElementById(frm).action="search_adevent_ui.php#start";
                                 }
-                                else {
-                                  secondCol="";
-                                }
-                                if(tds[2]){
-                                  thirdCol = tds[2].textContent.toUpperCase();
-                                }
-                                else {
-                                  thirdCol="";
-                                }
+                                document.getElementById(frm).submit();
 
-                                if (firstCol.indexOf(i1) > -1 && secondCol.indexOf(i2) > -1 && thirdCol.indexOf(i3) > -1) {
-                                  tr[i].style.display = "";
-                                } 
-                                else {
-                                  tr[i].style.display = "none";
-                                }
-                              }   
-                            }    
-                          </script>
+                              }
+
+                            </script>
+
+                          </table>
 
 
+                          <script>
 
-                          &nbsp
-                          <br>
+                            function searchAll() {
+                              var i1, i2, i3, i4, table, tr, tds;
+                              i1 = document.getElementById("numInput").value.toUpperCase();
+                              i2 = document.getElementById("nameInput").value.toUpperCase();
+                              i3 = document.getElementById("desInput").value.toUpperCase();
+
+                              table = document.getElementById("myTable");
+                              tr = table.getElementsByTagName("tr");
+                              for (i = 1; i < tr.length; i++) {
+
+                                tds = tr[i].getElementsByTagName("td");
+                                var firstCol, secondCol, thirdCol
+                                if(tds[0]){
+                                 firstCol = tds[0].textContent.toUpperCase();
+                               }
+                               else {
+                                firstCol="";
+                              }
+                              if(tds[1]){
+                                secondCol = tds[1].textContent.toUpperCase();
+                              }
+                              else {
+                                secondCol="";
+                              }
+                              if(tds[2]){
+                                thirdCol = tds[2].textContent.toUpperCase();
+                              }
+                              else {
+                                thirdCol="";
+                              }
+
+                              if (firstCol.indexOf(i1) > -1 && secondCol.indexOf(i2) > -1 && thirdCol.indexOf(i3) > -1) {
+                                tr[i].style.display = "";
+                              } 
+                              else {
+                                tr[i].style.display = "none";
+                              }
+                            }   
+                          }    
+                        </script>
 
 
-                        </div>
+
+                        &nbsp
+                        <br>
+
+
                       </div>
-
                     </div>
+
                   </div>
                 </div>
+              </div>
 
-                <style type="text/css">
-                .mobilecat{float: left; width: 100%; margin-bottom: 20px;}.right-sidess {
-                  float: right!important;
-                  width: 90%!important;
-                  margin-top: 60px;
-                  }.blog-thumb{float:left;}.pg-num {
-                    float: left;
-                    width: 100%;
-                    text-align: center;
-                    margin: 10px 0px;
-                    }a.page-numbers {
-                      padding: 5px;
-                    }
-                  </style>
-                  <!-- content end -->
+              <style type="text/css">
+              .mobilecat{float: left; width: 100%; margin-bottom: 20px;}.right-sidess {
+                float: right!important;
+                width: 90%!important;
+                margin-top: 60px;
+                }.blog-thumb{float:left;}.pg-num {
+                  float: left;
+                  width: 100%;
+                  text-align: center;
+                  margin: 10px 0px;
+                  }a.page-numbers {
+                    padding: 5px;
+                  }
+                </style>
+                <!-- content end -->
 
 
-                  <script>
-                    var num = 0;
-                    var post_set = "0";
+                <script>
+                  var num = 0;
+                  var post_set = "0";
 
-                    jQuery("a.load-more").on('click', function(){
-                      num++;
-                      if(num < post_set){
-                        jQuery(this).attr('data_offset', num);
-                        var offset = jQuery(this).attr('data_offset');
-                        jQuery.ajax({
-                          type:"POST",
-                          url: "https://goaptaris.com/wp-admin/admin-ajax.php",
-                          data: {action: 'call_admin_ajax', offset:offset},
-                          success:function(resp){
-                            $('.ajax_append').append(resp);
-                          }
-                        });
-                      }else{
-                        jQuery(this).text("No More posts");
-                      }
-                    });
-                  </script>
-                  <script>
-                    jQuery(document).ready(function(){
-                      jQuery("#left-sidebar h2").click(function(){
-                        var classStatus = jQuery("#myClassAdd").val();
-                        jQuery(".list-cat").toggle();
-                        if(classStatus != 0){
-                          jQuery(".list-cat").removeClass("myClass");
-                          jQuery("#myClassAdd").attr('value','0');
-                        } else {
-                          jQuery(".list-cat").addClass("myClass");
-                          jQuery("#myClassAdd").attr('value','1');
+                  jQuery("a.load-more").on('click', function(){
+                    num++;
+                    if(num < post_set){
+                      jQuery(this).attr('data_offset', num);
+                      var offset = jQuery(this).attr('data_offset');
+                      jQuery.ajax({
+                        type:"POST",
+                        url: "https://goaptaris.com/wp-admin/admin-ajax.php",
+                        data: {action: 'call_admin_ajax', offset:offset},
+                        success:function(resp){
+                          $('.ajax_append').append(resp);
                         }
                       });
-                    });
-                  </script>
-                  <script type="text/javascript">
-                    setInterval(function(){
-                      if($('.form-section form').hasClass('sent')){
-                        $('.form-top-des').hide();
-                        $('.form-section').addClass('nopadding');
+                    }else{
+                      jQuery(this).text("No More posts");
+                    }
+                  });
+                </script>
+                <script>
+                  jQuery(document).ready(function(){
+                    jQuery("#left-sidebar h2").click(function(){
+                      var classStatus = jQuery("#myClassAdd").val();
+                      jQuery(".list-cat").toggle();
+                      if(classStatus != 0){
+                        jQuery(".list-cat").removeClass("myClass");
+                        jQuery("#myClassAdd").attr('value','0');
+                      } else {
+                        jQuery(".list-cat").addClass("myClass");
+                        jQuery("#myClassAdd").attr('value','1');
                       }
-                    }, 100);
-                  </script>
-                  <style>
-                  .blog-sm-desc h4 a, .blog-sm-desc p a { display: inline;}.right-sides{float:left;width:100%; margin-top: 60px;}
-                </style>
-                <!-- footer start -->
-                <footer class="footer row">
-                  <div class="container">
-                    <div class="upper-footer row">
-                      <div class="line"></div>
-                      <h2>Follow Us</h2>
-                      <div class="social">
-                        <div id="text-3" class="widget_text">     <div class="textwidget"><a target="_blank" href="https://twitter.com/goaptaris" class="icon1"></a>
-                          <a target="_blank" href="https://www.facebook.com/Aptaris/" class="icon2"></a>
-                          <a target="_blank" href="https://www.linkedin.com/company/aptaris" class="icon3"></a>
-                          <a target="_blank" href="https://www.youtube.com/channel/UCaH0rZ7rvI6MQyOnUGTBSnQ" class="icon4"></a>
-                          <!--<a href="#" class="icon5"></a>--></div>
-                        </div>        </div>
-                        <span>LAST TWEET</span>
-                        <div id="twitter-2" class="widget_twitter"><div><h3><span class='twitterwidget twitterwidget-title'>Twitter: goaptaris</span></h3><ul><li><span class='entry-content'>"When people are treated right and feel valued, they work harder and play harder for their coaches"
+                    });
+                  });
+                </script>
+                <script type="text/javascript">
+                  setInterval(function(){
+                    if($('.form-section form').hasClass('sent')){
+                      $('.form-top-des').hide();
+                      $('.form-section').addClass('nopadding');
+                    }
+                  }, 100);
+                </script>
+                <style>
+                .blog-sm-desc h4 a, .blog-sm-desc p a { display: inline;}.right-sides{float:left;width:100%; margin-top: 60px;}
+              </style>
+              <!-- footer start -->
+              <footer class="footer row">
+                <div class="container">
+                  <div class="upper-footer row">
+                    <div class="line"></div>
+                    <h2>Follow Us</h2>
+                    <div class="social">
+                      <div id="text-3" class="widget_text">     <div class="textwidget"><a target="_blank" href="https://twitter.com/goaptaris" class="icon1"></a>
+                        <a target="_blank" href="https://www.facebook.com/Aptaris/" class="icon2"></a>
+                        <a target="_blank" href="https://www.linkedin.com/company/aptaris" class="icon3"></a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCaH0rZ7rvI6MQyOnUGTBSnQ" class="icon4"></a>
+                        <!--<a href="#" class="icon5"></a>--></div>
+                      </div>        </div>
+                      <span>LAST TWEET</span>
+                      <div id="twitter-2" class="widget_twitter"><div><h3><span class='twitterwidget twitterwidget-title'>Twitter: goaptaris</span></h3><ul><li><span class='entry-content'>"When people are treated right and feel valued, they work harder and play harder for their coaches"
 <a href="https://t.co/t0Ysg2yIVE">https://t.co/t0Ysg2yIVE</a></span> <span class='entry-meta'><span class='time-meta'><a href="http://twitter.com/GoAptaris/statuses/795701676124545024">about 11 months ago</a></span> <span class='from-meta'>from <a href="http://www.hootsuite.com" rel="nofollow">Hootsuite</a></span></span> <span class="intent-meta"><a href="http://twitter.com/intent/tweet?in_reply_to=795701676124545024" data-lang="en" class="in-reply-to" title="Reply">Reply</a><a href="http://twitter.com/intent/retweet?tweet_id=795701676124545024" data-lang="en" class="retweet" title="Retweet">Retweet</a><a href="http://twitter.com/intent/favorite?tweet_id=795701676124545024" data-lang="en" class="favorite" title="Favorite">Favorite</a></span></li></ul></div></div>       <!--<p>Dutch Startupmap - All startups from Holland in one map #startups #aanmelen #handig
     http://t.co/skGG4JA3 via@sharethis</p>
     <a href="#" class="whoo">@whoopaa</a> -->

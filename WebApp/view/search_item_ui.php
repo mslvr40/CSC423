@@ -277,7 +277,7 @@ Click the help icon above to learn more.
 
                   while($row = mysql_fetch_Array($result)) {
                     ?>
-                    <form id = "<?php echo htmlspecialchars($row['ItemNumber']); ?>" action='modify_item_ui.php#start' method='POST'>
+                    <form id = "<?php echo htmlspecialchars($row['ItemNumber']); ?>"  method='POST'>
                       <tr>
                         <td>  <input type="hidden" name="itemNumberInput" value="<?php echo htmlspecialchars($row['ItemNumber']); ?>"> <?php echo $row['ItemNumber']; ?> </td>
 

@@ -51,6 +51,12 @@
     background: none !important;
     padding: 0 !important;
   }
+	  table.date {
+		margin-bottom: 20px;
+	}
+	table.date td {
+		CELLSPACING=3;
+	}
 </style>
 <link rel='stylesheet' id='contact-form-7-css'  href='https://goaptaris.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.9' media='all' />
 <link rel='stylesheet' id='reset-css'  href='https://goaptaris.com/wp-content/themes/aptaris/css/reset.css?ver=4.8.2' media='all' />
@@ -110,69 +116,59 @@ Click the help icon above to learn more.
 }
 </style>
 <script type="text/javascript">
-  function validateDes(){
-    if(document.getElementById("itemDescription").value==""){
-      alert("Description is a required field!");
+  function valAdCode(){
+		
+    var adCodeRegex = new RegExp("^[A-Za-z0-9]*$");
+    
+		if(document.getElementById("AdCode").value==""){
+			alert("Ad Event Code is required!");
+			return false;
+		}
+    if(!adCodeRegex.test(document.getElementById("AdCode").value)){
+      alert("Ad Event Code must be numbers and letters only!");
       return false;
     }
-    return true;
-  }
-  function validateCap(){
-    if(document.getElementById("itemCategory").value==""){
-      alert("Category is a required field!");
-      return false;
-    }
-    return true;
-  }
-  function validateDep(){
-    if(document.getElementById("itemDepartment").value==""){
-      alert("Description is a required field");
-      return false;
-    }
-    return true;
-  }
-  function validateCost(){
-    if(document.getElementById("itemPurchaseCost").value==""){
-      alert("Purchase Cost is a required field");
-      return false;
-    }
-    var regex = new RegExp("^([0-9]+|([0-9]*\.[0-9]{2}))$");
-    if(!regex.test(document.getElementById("itemPurchaseCost").value)){
-      alert("Please fix format of Purchase Cost Field");
-      return false;
-    }
-    return true;
-  }
-  function validateRetail(){
-    if(document.getElementById("itemRetailPrice").value==""){
-      alert("Retail Price is a required field");
-      return false;
-    }
-    var regex = new RegExp("^([0-9]+|([0-9]*\.[0-9]{2}))$");
-    if(!regex.test(document.getElementById("itemRetailPrice").value)){
-      alert("Please fix format of Retail Price Field");
-      return false;
-    }
-    return true;
-  }
-  function validateForm() {
-    if(!validateDes()){
-      return false;
-    }
-    if(!validateCap()){
-      return false;
-    }
-    if(!validateDep()){
-      return false;
-    }
-    if(!validateCost()){
-      return false;
-    }
-    if(!validateRetail()){
-      return false;
-    }
-    return true;
-  }
+		return true;
+	}
+	function valAdName(){
+		if(document.getElementById("AdName").value==""){
+			alert("Ad Name is a required field!");
+			return false;
+		}
+		return true;
+	}
+	function valAdDesc(){
+		if(document.getElementById("AdDesc").value==""){
+			alert("Ad Description is a required field!");
+			return false;
+		}
+		return true;
+	}
+	function valAdDate(){
+		var startDate = document.getElementById("AdStart").value;
+		var endDate = document.getElementById("AdEnd").value;
+		if((new Date(startDate).getTime() > new Date(endDate).getTime())){
+			alert("Start Date cannot be after End Date!");
+			return false;
+		}
+		return true;
+	}
+	
+	function validateForm() {
+		if(!valAdCode()){
+			return false;
+		}
+		if(!valAdName()){
+			return false;
+		}
+		if(!valAdDesc()){
+			return false;
+		}
+		if(!valAdDate()){
+		   	return false;
+		}
+		return true;
+	}
 </script>
 
 </head>
@@ -309,8 +305,8 @@ Click the help icon above to learn more.
                       <div style="display: none;">
 
                       </div>
-											<div class="one_half"><span class="wpcf7-form-control-wrap AdCode"><input type="text" id = "AdCode" name="AdCode" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Event Code" /></span></div>
-                      <div class="one_half"><span class="wpcf7-form-control-wrap AdName"><input type="text" id = "AdName" name="AdName" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Ad Name" /></span></div>
+											<div class="one_half"><span class="wpcf7-form-control-wrap AdCode"><input type="text" id = "AdCode" name="AdCode" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder=$initNumber /></span></div>
+                      <div class="one_half"><span class="wpcf7-form-control-wrap AdName"><input type="text" id = "AdName" name="AdName" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder=$initName /></span></div>
                       
                       	<table class='date'>
 													<tr>
@@ -319,7 +315,7 @@ Click the help icon above to learn more.
 													</tr>
 												</table>
                       
-                      <div class="one_half"><span class="wpcf7-form-control-wrap AdDesc"><input type="text" id = "AdDesc" name="AdDesc" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Ad Description" /></span></div>
+                      <div class="one_half"><span class="wpcf7-form-control-wrap AdDesc"><input type="text" id = "AdDesc" name="AdDesc" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder=$initDescription /></span></div>
 											<div class="select-box"><span class="wpcf7-form-control-wrap AdType"><select id = "AdEventType" name="AdEventType" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
 												<option value="" rel = "select"  disabled selected>Type</option>
 												<option value="Planner" rel="planner">Planner</option>

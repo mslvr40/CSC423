@@ -259,8 +259,8 @@ Click the help icon above to learn more.
 
                 ?>
 
-                <input type="text" id="numInput" onkeyup="searchAll()" placeholder="Promotion Code">
-                <input type="text" id="nameInput" onkeyup="searchAll()" placeholder="Promotion Name" >
+                <input type="text" id="numInput" onkeyup="searchAll()" placeholder="Event Code">
+                <input type="text" id="nameInput" onkeyup="searchAll()" placeholder="Event Name" >
                 <input type="text" id="desInput" onkeyup="searchAll()" placeholder="Description" >
 
 

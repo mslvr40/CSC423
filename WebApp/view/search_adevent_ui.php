@@ -283,7 +283,7 @@ Click the help icon above to learn more.
                       <form  action='../model/add_event_to_promo.php#start' method='POST'>
                         <input type="hidden" name="promoCode" value="<?php echo htmlspecialchars($_POST['promoCodeInput']); ?>">
                         <?php } else { ?>
-                        <form action="modify_adevent.php#start" method='POST'>
+                        <form action="modify_adevent_ui.php#start" method='POST'>
                           <?php } ?>
                           <tr>
                             <td>  <input type="hidden" name="eventCodeInput" value="<?php echo htmlspecialchars($row['EventCode']); ?>"> <?php echo $row['EventCode']; ?> </td>

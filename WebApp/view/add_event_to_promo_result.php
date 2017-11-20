@@ -281,7 +281,7 @@ Click the help icon above to learn more.
                   <section class="form-section row">
                     <div align="center">
                       <h1><?php echo $_POST['message']; ?></h1>
-                      <input type="button" onclick="location.href='./search_promotion_ui.php#start';" value="Go Back" />
+                      <input type="button" onclick="location.href='./search_item_ui.php#start';" value="Go Back" />
                     </div>
                   </section>
 

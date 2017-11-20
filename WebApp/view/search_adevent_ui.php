@@ -286,7 +286,7 @@ Click the help icon above to learn more.
                         <form action="modify_adevent.php#start" method='POST'>
                           <?php } ?>
                           <tr>
-                            <td>  <input type="hidden" name="EventCodeInput" value="<?php echo htmlspecialchars($row['EventCode']); ?>"> <?php echo $row['EventCode']; ?> </td>
+                            <td>  <input type="hidden" name="eventCodeInput" value="<?php echo htmlspecialchars($row['EventCode']); ?>"> <?php echo $row['EventCode']; ?> </td>
 
                             <td>  <input type="hidden" name="EventNameInput" value="<?php echo htmlspecialchars($row['Name']); ?>"> <?php echo $row['Name']; ?> </td>
 

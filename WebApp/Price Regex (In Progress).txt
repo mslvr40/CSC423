@@ -1,0 +1,7 @@
+REGEX Validation for Price
+
+if(^\d+(?:\.\d{1})?$)
+	String.format("%-1s", price ).replace(' ', '0')
+	
+if(^\d+(?:\.\d{1})?$)
+	String.format("%-2s", price ).replace(' ', '0')

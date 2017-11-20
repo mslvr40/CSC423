@@ -40,8 +40,8 @@ function show_report1_result($result, $output, $date)
 	<center>
 	<table id = "myTable" border = "1">
 	<tr>
+	<th>Ad/Event Name</th>
 	<th>Promotion Name</th>
-	<th>Event Name</th>
 	</tr>';
 	while($row = mysql_fetch_array ($result)){
 		echo'

@@ -305,8 +305,10 @@ Click the help icon above to learn more.
                       <div style="display: none;">
 
                       </div>
-											<div class="one_half"><span class="wpcf7-form-control-wrap AdCode"><input type="text" id = "AdCode" name="AdCode" value = "<?php echo htmlspecialchars($initNumber); ?>" placeholder="Event Number"  size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span></div>
-                      <div class="one_half"><span class="wpcf7-form-control-wrap AdName"><input type="text" id = "AdName" name="AdName" value = "<?php echo htmlspecialchars($initName); ?>" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Event Name" /></span></div>
+                      Event Code
+											<div class="one_half"><span class="wpcf7-form-control-wrap AdCode"><input style="background-color:lightgray;" type="text" readonly id = "AdCode" name="AdCode" value = "<?php echo htmlspecialchars($initNumber); ?>"   size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span></div>
+                      Name
+                      <div class="one_half"><span class="wpcf7-form-control-wrap AdName"><input type="text" id = "AdName" name="AdName" value = "<?php echo htmlspecialchars($initName); ?>" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"  /></span></div>
                       
                       	<table class='date'>
 													<tr>
@@ -314,32 +316,16 @@ Click the help icon above to learn more.
 														<td><div class="one_half"><span class="wpcf7-form-control-wrap companysize">Ad End :  <input type="date" min="1" step="any" id="AdEnd" name="AdEnd" value = "<?php echo htmlspecialchars($initEndDate); ?>" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span></div></td>
 													</tr>
 												</table>
-                      
-                      <div class="one_half"><span class="wpcf7-form-control-wrap AdDesc"><input type="text" id = "AdDesc" name="AdDesc" value = "<?php echo htmlspecialchars($initDescription); ?>" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder=$initDescription /></span></div>
+                      Description
+                      <div class="one_half"><span class="wpcf7-form-control-wrap AdDesc"><input type="text" id = "AdDesc" name="AdDesc" value = "<?php echo htmlspecialchars($initDescription); ?>" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"  /></span></div>
 											<div class="select-box"><span class="wpcf7-form-control-wrap AdType"><select id = "AdEventType" name="AdEventType" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
-												<option value="" rel = "select"  disabled selected>Type</option>
-												<option value="Planner" rel="planner">Planner</option>
-												<option value="Circular" rel = circ>Circular</option>
-												<option value="PassOut" rel ="passout">PassOut</option>
+												<option value=""   rel = "select"  disabled selected>Type</option>
+												<option value="Planner" <?php if ($initAdType == 'Planner') echo "selected";?> rel="planner">Planner</option>
+												<option value="Circular" <?php if ($initAdType == 'Circular') echo "selected";?> rel = circ>Circular</option>
+												<option value="PassOut" <?php if ($initAdType == 'PassOut') echo "selected";?> rel ="passout">PassOut</option>
 											</select></span></div>
 
-                        <script>
-                          $(document).ready(function(){
-                            var $cat = $('select[name=itemCategory]'),
-                            $items = $('select[name=itemDepartment]');
-                            $cat.change(function(){
-                              var $this = $(this).find(':selected'),
-                              rel = $this.attr('rel'),
-                              $set = $items.find('option.' + rel);
-                              if ($set.size() < 0) {
-                                $items.hide();
-                                return;
-                              }
-                              $items.show().find('option').hide();
-                              $set.show().first().prop('selected', true);
-                            });
-                          });
-                        </script>
+                       
 
                         <div class="submit-action">
                           <p>             <input type="submit" onclick="return validateForm();" value="Submit" class="wpcf7-form-control wpcf7-submit" />

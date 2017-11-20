@@ -300,7 +300,7 @@ Click the help icon above to learn more.
                               <td> <input type = 'submit'  value='Add Promotion'>
                                 <?php } else { ?>
                                 <td> <input type = 'button' onClick="clickMe(1, <?php echo htmlspecialchars($row['PromoCode']); ?>)" value='Modify'>
-                                 <input type = 'button' onClick="clickMe(2, <?php echo htmlspecialchars($row['PromoCode']); ?>)" value='Add to Ad/Event '>
+                                 <input type = 'button' onClick="clickMe(2, <?php echo htmlspecialchars($row['PromoCode']); ?>)" value='Add Ad/Event '>
                                  <?php } ?>
                                </tr>
                              </form>

@@ -28,6 +28,16 @@
 		{
 			$message = "AdEvent $adCode: $desMessage inserted successfully.";
 		}
+		$result = mysql_query("SELECT * FROM AdEvent WHERE EventCode LIKE $adCode");
+
+		$num = mysql_num_rows($result);
+		if($num !=0)
+		{
+			$message = "The Event Code you entered is already active. Please try again with a unique code";
+		}
+
+
+
 		echo '<form method = "POST" action = "../view/new_adevent_result.php#start"> <input name = "message" type = "hidden" value = "'. htmlentities($message) . '"/>
 		<script> document.getElementsByTagName("form")[0].submit()</script>';
 	}

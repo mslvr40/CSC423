@@ -28,6 +28,11 @@
 		else{
 			$message = "Promotion $id: $nameMessage: inserted successfully.";
 		}
+		$num = mysql_num_rows(mysql_query("SELECT * FROM Promotion WHERE PromoCode = $id"));
+		if($num !=0)
+		{
+			$message = "The Promotion Code you entered is already active. Please try again with a unique code";
+		}
 
 		echo '<form method = "POST" action = "../view/new_promotion_result.php#start"> <input name = "message" type = "hidden" value = "'. htmlentities($message) . '"/>
 		<script> document.getElementsByTagName("form")[0].submit()</script>';

@@ -20,7 +20,6 @@
 		$purchaseCost = mysql_real_escape_string($_POST['itemPurchaseCost']);
 		$retailPrice = mysql_real_escape_string($_POST['itemRetailPrice']);
 
-
 		$query = "Insert Item (ItemNumber, ItemDescription, Category, DepartmentName, PurchaseCost, FullRetailPrice)
 		values ( '$id', '$description', '$category', '$department', '$purchaseCost', '$retailPrice')";
 
@@ -35,6 +34,11 @@
 		{
 			$message = "Item $id: $desMessage inserted successfully.";
 
+		}
+		$num = mysql_num_rows(mysql_query("SELECT * FROM Item WHERE ItemNumber = $id"));
+		if($num !=0)
+		{
+			$message = "The item number you entered is already active. Please try again with a unique number";
 		}
 
 

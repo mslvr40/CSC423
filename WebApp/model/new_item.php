@@ -12,7 +12,7 @@
 	{
 
 		connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
-
+		$id = mysql_real_escape_string($_POST['itemNumber']);
 		$desMessage = $_POST['itemDescription'];
 		$description = mysql_real_escape_string($_POST['itemDescription']);
 		$category = mysql_real_escape_string($_POST['itemCategory']);
@@ -21,13 +21,12 @@
 		$retailPrice = mysql_real_escape_string($_POST['itemRetailPrice']);
 
 
-		$query = "Insert Item (ItemDescription, Category, DepartmentName, PurchaseCost, FullRetailPrice)
-		values ( '$description', '$category', '$department', '$purchaseCost', '$retailPrice')";
+		$query = "Insert Item (ItemNumber, ItemDescription, Category, DepartmentName, PurchaseCost, FullRetailPrice)
+		values ( '$id', '$description', '$category', '$department', '$purchaseCost', '$retailPrice')";
 
 		$result = mysql_query($query);
 
 		$message = "";
-		$id = mysql_insert_id();
 		if (!$result) 
 		{
 			$message = "Error in inserting Item: $desMessage: ". mysql_error();

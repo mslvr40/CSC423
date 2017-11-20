@@ -10,6 +10,7 @@
 	{
 
 		connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
+		$id = mysql_real_escape_string($_POST['promoCode']);
 		$nameMessage = $_POST['promoName'];
 		$name = mysql_real_escape_string($_POST['promoName']);
 		$amount = mysql_real_escape_string($_POST['promoAmount']);
@@ -21,7 +22,6 @@
 
 		$result = mysql_query($query);
 		$message = "";
-		$id = mysql_insert_id();
 		if (!$result){
 			$message = "Error in inserting Promotion $id: $nameMessage: ". mysql_error();
 		}

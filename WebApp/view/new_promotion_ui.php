@@ -90,7 +90,15 @@ Click the help icon above to learn more.
 }
 </style>
 <script type="text/javascript">
-	
+
+	function valPromoCode(){
+		if(document.getElementById("promoCode").value==""){
+			alert("Promotion Code is a required field!");
+			return false;
+		}
+		return true;
+	}
+
 	function valPromoName(){
 		if(document.getElementById("promoName").value==""){
 			alert("Promotion Name is a required field!");
@@ -122,6 +130,7 @@ Click the help icon above to learn more.
 			return true;
 		}
 	}
+
 	function valTypeOff(){
 		if(document.getElementById("typeOff").value==""){
 			alert("You must select a type of discount!");
@@ -129,14 +138,11 @@ Click the help icon above to learn more.
 		}
 		return true;
 	}
-	function valPromoDesc(){
-		if(document.getElementById("promoDescription").value==""){
-			alert("Promotion Description is a required field!");
+
+	function valForm(){
+		if(!valPromoCode()){
 			return false;
 		}
-		return true;
-	}
-	function valForm(){
 		if(!valPromoName()){
 			return false;
 		}
@@ -146,9 +152,7 @@ Click the help icon above to learn more.
 		if(!valTypeOff()){
 			return false;
 		}
-		if(!valPromoDesc()){
-			return false;
-		}
+
 		return true;
 	}
 	
@@ -274,7 +278,9 @@ Click the help icon above to learn more.
 										<form action='../model/new_promotion.php#start' onsubmit="return valForm()" method='post'>
 											<div style="display: none;">
 
-											</div>
+											</div>		
+											<div class="one_half"><span class="wpcf7-form-control-wrap promoName"><input type="text" id="promoCode" name="promoCode" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Promo Code" /></span></div>
+
 											<div class="one_half"><span class="wpcf7-form-control-wrap promoName"><input type="text" id="promoName" name="promoName" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Promo Name" /></span></div>
 
 											<div class="one_half"><span class="wpcf7-form-control-wrap promoAmount"><input type="text" name="promoAmount" id="promoAmount" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Amount Off" /></span></div>

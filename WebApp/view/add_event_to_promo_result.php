@@ -96,7 +96,7 @@ Click the help icon above to learn more.
 <script type="text/javascript">
 
   function validateDes(){
-    
+
     if(document.getElementById("itemDescription").value==""){
       alert("Description is a required field!");
       return false;
@@ -252,7 +252,7 @@ Click the help icon above to learn more.
           <div class="content row" id = "start">
             <div class="container">
               <div class="blog-content row">
-                
+
                 <div id="left-sidebar">
                   <br><br><br>
                   
@@ -471,7 +471,7 @@ Click the help icon above to learn more.
 <script type='text/javascript' src='https://goaptaris.com/wp-content/plugins/thrive-visual-editor/thrive-dashboard/js/dist/frontend.min.js?ver=2.0.11'></script>
 <script type='text/javascript' src='https://goaptaris.com/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
 <script type='text/javascript' src='https://platform.twitter.com/widgets.js?ver=1.0.0'></script>
-<script type='text/javascript'>
+<script type='text/javascript'> 
   /* <![CDATA[ */
   var countVars = {"disqusShortname":"goaptaris"};
   /* ]]> */

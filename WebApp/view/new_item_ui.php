@@ -1,5 +1,6 @@
 
 <!doctype html>
+
 <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js">
 <head>
 	<meta charset="UTF-8">
@@ -95,6 +96,14 @@ Click the help icon above to learn more.
 
 <script type="text/javascript">
 
+function validateId(){
+		
+		if(document.getElementById("itemNumber").value==""){
+			alert("Item Number is a required field!");
+			return false;
+		}
+		return true;
+	}
 	function validateDes(){
 		
 		if(document.getElementById("itemDescription").value==""){
@@ -145,6 +154,9 @@ Click the help icon above to learn more.
 
 	function validateForm() {
 
+		if(!validateId()){
+			return false;
+		}
 		if(!validateDes()){
 			return false;
 		}
@@ -289,6 +301,8 @@ Click the help icon above to learn more.
 											<div style="display: none;">
 
 											</div>
+											<div class="one_half"><span class="wpcf7-form-control-wrap firstname"><input type="text" id = "itemNumber" name="itemNumber" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Item Number" /></span></div>
+
 											<div class="one_half"><span class="wpcf7-form-control-wrap firstname"><input type="text" id = "itemDescription" name="itemDescription" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Item Description" /></span></div>
 											<div class="select-box"><span class="wpcf7-form-control-wrap typeOff"><select id = "itemCategory" name="itemCategory" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
 												<option value="" rel = "select"  selected>Category</option>

@@ -7,4 +7,4 @@ if(^\d+(?:\.\d{0})?$)
 	String.format("%-2s", price ).replace(' ', '0')
 	
 if(^\d+(?:\.\d{0})?$)
-	String.format(%-2s", price ).replace(' ', '0')
+	String.format("%-2s", price ).replace(' ', '0')

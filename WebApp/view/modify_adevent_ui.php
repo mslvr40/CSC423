@@ -301,7 +301,7 @@ Click the help icon above to learn more.
                     $initEndDate = $_POST['endDateInput'];
                     $initAdType = $_POST['AdTypeInput'];
                     ?>
-                    <form  action='../model/modify_adevent.php#start' onsubmit="return validateForm();" method='post'>
+                    <form  action='../model/modify_adevent.php' onsubmit="return validateForm();" method='post'>
                       <div style="display: none;">
 
                       </div>

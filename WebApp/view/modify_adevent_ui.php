@@ -290,7 +290,7 @@ Click the help icon above to learn more.
                   <section class="form-section row">
 
                     <div class="form-top-des">
-                      <h2>Modify Item</h2>
+                      <h2>Modify Ad Event</h2>
 
                     </div>
                     <?php 

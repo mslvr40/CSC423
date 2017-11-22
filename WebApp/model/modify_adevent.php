@@ -8,7 +8,7 @@
 	function insert_teacher()
 	{
 		connect_and_select_db(DB_SERVER, DB_UN, DB_PWD,DB_NAME);
-		$desMessage = $_POST['AdCode'];
+		$desMessage = $_POST['AdName'];
 		$number = $_POST['AdCode'];
   		$adCode = mysql_real_escape_string($_POST['AdCode']);
 		$adName = mysql_real_escape_string($_POST['AdName']);
@@ -17,13 +17,13 @@
 		$adDesc = mysql_real_escape_string($_POST['AdDesc']);
 		$adEventType = mysql_real_escape_string($_POST['AdEventType']);
 		$query = "UPDATE AdEvent SET EventCode = '$adCode', Name = '$adName', StartDate = 'adStart', 
-		EndDate = '$adEnd', Description = '$adDesc', AdType = '$adEventType' WHERE AdCode = $desMessage";
+		EndDate = '$adEnd', Description = '$adDesc', AdType = '$adEventType' WHERE EventCode = $number";
 
 		$result = mysql_query($query);
 		$message = "";
 		if (!$result) 
 		{
-			$message = "Error in modifying Ad Event $number: $desMessage: ". mysql_error();
+			$message = "Error in modifying Ad Event $desMessage: $number : ". mysql_error();
 		}
 		else
 		{

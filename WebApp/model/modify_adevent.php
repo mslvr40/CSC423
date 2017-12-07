@@ -17,7 +17,7 @@
 		$adDesc = mysql_real_escape_string($_POST['AdDesc']);
 		$adEventType = mysql_real_escape_string($_POST['AdEventType']);
 		$query = "UPDATE AdEvent SET EventCode = '$adCode', Name = '$adName', StartDate = '$adStart', 
-		EndDate = '$adEnd', Description = '$adDesc', AdType = '$adEventType' WHERE AdCode = '$number'";
+		EndDate = '$adEnd', Description = '$adDesc', AdType = '$adEventType' WHERE EventCode = '$number'";
 
 		$result = mysql_query($query);
 		$message = "";

@@ -276,7 +276,7 @@ Click the help icon above to learn more.
                                         <li class='cat-item-all'>
                                             <a href = "report3_ui.php#start"> Event with biggest savings </a></li><br />
                                         <li class='cat-item-all'>
-                                            <a href = "report4_ui.php#start"> Top 50 items on sale </a></li>
+                                            <a href = "report4.php"> Top 50 items on sale </a></li>
                                     </ul>
 
 								</section>

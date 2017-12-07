@@ -270,13 +270,13 @@ Click the help icon above to learn more.
 								<section class="form-section row">
                                     <ul class="list-cat">
 										<li class='cat-item-all'>
-                                            <a href = "report1_ui.php"> Search promotions by date </a></li><br />
+                                            <a href = "report1_ui.php#start"> Search promotions by date </a></li><br />
                                         <li class='cat-item-all'>
-                                            <a href = "report2_ui.php"> Search promotions by amount and type </a></li><br />
+                                            <a href = "report2_ui.php#start"> Search promotions by amount and type </a></li><br />
                                         <li class='cat-item-all'>
-                                            <a href = "report3_ui.php"> Event with biggest savings </a></li><br />
+                                            <a href = "report3_ui.php#start"> Event with biggest savings </a></li><br />
                                         <li class='cat-item-all'>
-                                            <a href = "report4_ui.php"> Top 50 items on sale </a></li>
+                                            <a href = "report4_ui.php#start"> Top 50 items on sale </a></li>
                                     </ul>
 
 								</section>

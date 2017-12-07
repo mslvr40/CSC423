@@ -1,5 +1,5 @@
 <?php
-function show_report4_result()
+function show_report4_result($result)
 {
 	echo "<HTML>";
 	echo "<HEAD>";

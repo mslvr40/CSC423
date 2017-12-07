@@ -8,7 +8,7 @@
 	function insert_promo()
 	{
 		connect_and_select_db(DB_SERVER, DB_UN, DB_PWD, DB_NAME);
-		$query = "SELECT AdEvent.Name AS AdEvent_Name, Item.ItemNumber, Item.ItemDescription, Item.PurchaseCost, PromotionItem.SalePrice, (Item.FullRetailPrice-PromotionItem.SalePrice) AS Savings
+		$query = "SELECT AdEvent.Name AS AdEvent_Name, Item.ItemNumber, Item.ItemDescription, Item.FullRetailPrice, PromotionItem.SalePrice, (Item.FullRetailPrice-PromotionItem.SalePrice) AS Savings
               FROM Item
               INNER JOIN PromotionItem ON Item.ItemNumber = PromotionItem.ItemNumber
               INNER JOIN Promotion ON PromotionItem.PromoCode = Promotion.PromoCode

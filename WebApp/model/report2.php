@@ -14,7 +14,7 @@
         $type = $_POST['typeOff'];
 
 
-		$query = "SELECT Promotion.PromoCode, Promotion.Name, Promotion.Description, Promotion.AmountOff, Promotion.PromoType Promotion WHERE Promotion.AmountOff = $off AND Promotion.PromoType = '$type'";
+		$query = "SELECT * FROM Promotion WHERE Promotion.AmountOff = $off AND Promotion.PromoType = '$type'";
 
 		$result = mysql_query($query);
 		$output = "";
@@ -22,7 +22,7 @@
 		if (!$result){
 			$output = "Error in finding promo with these variables: $off, $type : ". mysql_error();
 		}
-		\
+		
 		show_report2_result($result, $output, $off, $type);
 
 	}

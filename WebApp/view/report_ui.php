@@ -248,17 +248,17 @@ Click the help icon above to learn more.
 									<h2>categories</h2>
 									<input type="hidden" value="0" id="myClassAdd" />
 									<ul class="list-cat">
-										<li class='cat-item-all'><a href='./new_item_ui.php'>Insert new Item</a></li>	
+										<li class='cat-item-all'><a href='./new_item_ui.php#start'>Insert new Item</a></li>	
 									</li>
-									<li class="cat-item cat-item-137"><a href="./search_item_ui.php" >Modify Existing Item</a>
+									<li class="cat-item cat-item-137"><a href="./search_item_ui.php#start" >Modify Existing Item</a>
 									</li>
-									<li class="cat-item cat-item-15"><a href="./new_promotion_ui.php" >Insert new Promotion</a>
+									<li class="cat-item cat-item-15"><a href="./new_promotion_ui.php#start" >Insert new Promotion</a>
 									</li>
-									<li class="cat-item cat-item-390"><a href="./search_promotion_ui.php" >Modify Existing Promotion</a>
+									<li class="cat-item cat-item-390"><a href="./search_promotion_ui.php#start" >Modify Existing Promotion</a>
 									</li>
-									<li class="cat-item cat-item-12"><a href="./new_adevent_ui.php" >Add new Ad Event</a>
+									<li class="cat-item cat-item-12"><a href="./new_adevent_ui.php#start" >Add new Ad Event</a>
 									</li>
-									<li class="cat-item cat-item-1"><a href="./search_adevent_ui.php" >Modify Existing Ad Event</a>
+									<li class="cat-item cat-item-1"><a href="./search_adevent_ui.php#start" >Modify Existing Ad Event</a>
 									</li>
 									<li class="cat-item cat-item-1"><a href="./report_ui.php#start" >Reports</a>
 									</li>
@@ -268,7 +268,7 @@ Click the help icon above to learn more.
 							<div class="right-side">
 								<!-- ####################Insert CSC423 Stuff here#############################-->
 								<section class="form-section row">
-									<a href = "report1_ui.php"> Search promotions by date </a>
+									<a href = "report1_ui.php#start"> Search promotions by date </a>
 									
 									
 

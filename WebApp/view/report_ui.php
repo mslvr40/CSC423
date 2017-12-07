@@ -249,7 +249,7 @@ Click the help icon above to learn more.
 									<input type="hidden" value="0" id="myClassAdd" />
 									<ul class="list-cat">
 										<li class='cat-item-all'><a href='./new_item_ui.php#start'>Insert new Item</a></li>	
-									</li>
+								
 									<li class="cat-item cat-item-137"><a href="./search_item_ui.php#start" >Modify Existing Item</a>
 									</li>
 									<li class="cat-item cat-item-15"><a href="./new_promotion_ui.php#start" >Insert new Promotion</a>
@@ -268,9 +268,16 @@ Click the help icon above to learn more.
 							<div class="right-side">
 								<!-- ####################Insert CSC423 Stuff here#############################-->
 								<section class="form-section row">
-									<a href = "report1_ui.php#start"> Search promotions by date </a>
-									
-									
+                                    <ul class="list-cat">
+										<li class='cat-item-all'>
+                                            <a href = "report1_ui.php"> Search promotions by date </a></li><br />
+                                        <li class='cat-item-all'>
+                                            <a href = "report2_ui.php"> Search promotions by amount and type </a></li><br />
+                                        <li class='cat-item-all'>
+                                            <a href = "report3_ui.php"> Event with biggest savings </a></li><br />
+                                        <li class='cat-item-all'>
+                                            <a href = "report4_ui.php"> Top 50 items on sale </a></li>
+                                    </ul>
 
 								</section>
 								&nbsp

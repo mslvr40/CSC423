@@ -54,7 +54,7 @@ function show_report1_result($result, $output, $date)
 echo <<<UPTOEND
 
   <input type="button" value="Return to Main Menu" 
-	onClick="window.location='../view/report_ui.php'"/>
+	onClick="window.location='../view/report_ui.php#start'"/>
  
 UPTOEND;
 

@@ -260,6 +260,8 @@ Click the help icon above to learn more.
 									</li>
 									<li class="cat-item cat-item-1"><a href="./search_adevent_ui.php" >Modify Existing Ad Event</a>
 									</li>
+									<li class="cat-item cat-item-1"><a href="./report_ui.php#start" >Reports</a>
+								   	 </li>
 
 								</ul>
 							</div>

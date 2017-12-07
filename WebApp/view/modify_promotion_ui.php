@@ -10,6 +10,101 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- My shit -->
+<style>
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+    background-color: transparent;
+    align-content: center;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+    .wrap 
+    {text-align:center; }
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    color: orange;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    color: white;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: transparent;
+    color: orange;
+    
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+    
+    .fu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+.ck a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+.ck a:hover {
+    background-color: #555;
+    color: white;
+}
+    
+    
+    
+</style>
+    
+    <!-- End of My Shit -->
 
   <!-- This site is optimized with the Yoast SEO plugin v5.6.1 - https://yoast.com/wordpress/plugins/seo/ -->
   <link rel="canonical" href="https://goaptaris.com/insightsnews/" />
@@ -217,38 +312,41 @@ Click the help icon above to learn more.
         </div>
       </header>
       <!-- header end -->
-      <!-- navigation start -->
-      <span class="nav_trigger"><i class="fa fa-navicon"></i></span>
-      <!-- #push_sidebar -->
-      <div id="push_sidebar">
-        <div class="menu-logo">
-          <img src="https://goaptaris.com/wp-content/themes/aptaris/images/footer-logo.png" alt=""/>
-        </div>
-        <ul id="menu-sub-menu" class="menu"><li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="https://goaptaris.com/solution/">Solution</a></li>
-          <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="https://goaptaris.com/about-us/">About Us</a></li>
-          <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-15 current_page_item menu-item-19"><a href="https://goaptaris.com/insightsnews/">Insights / News</a></li>
-          <li id="menu-item-2170" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2170"><a href="https://goaptaris.com/careers/">Careers</a></li>
-        </ul>       <div class="social">
-          <div id="text-3" class="widget_text">     <div class="textwidget"><a target="_blank" href="https://twitter.com/goaptaris" class="icon1"></a>
-            <a target="_blank" href="https://www.facebook.com/Aptaris/" class="icon2"></a>
-            <a target="_blank" href="https://www.linkedin.com/company/aptaris" class="icon3"></a>
-            <a target="_blank" href="https://www.youtube.com/channel/UCaH0rZ7rvI6MQyOnUGTBSnQ" class="icon4"></a>
-            <!--<a href="#" class="icon5"></a>--></div>
-          </div>    </div>
-        </div>
-        <!-- /#push_sidebar -->
+    <!-- navigation start -->		
+                        <div class="social">
+					<div id="text-3" class="widget_text">			<div class="textwidget"><a target="_blank" href="https://twitter.com/goaptaris" class="icon1"></a>
+						<a target="_blank" href="https://www.facebook.com/Aptaris/" class="icon2"></a>
+						<a target="_blank" href="https://www.linkedin.com/company/aptaris" class="icon3"></a>
+						<a target="_blank" href="https://www.youtube.com/channel/UCaH0rZ7rvI6MQyOnUGTBSnQ" class="icon4"></a>
+						<!--<a href="#" class="icon5"></a>--></div>
+					</div>		</div>
+        
+				<!-- /#push_sidebar -->
+        <!-- NAVBAR -->
         <section class="navi row">
-          <div class="container">
-            <div class="navigation">
-              <ul id="menu-sub-menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="https://goaptaris.com/solution/">Solution</a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="https://goaptaris.com/about-us/">About Us</a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-15 current_page_item menu-item-19"><a href="https://goaptaris.com/insightsnews/">Insights / News</a></li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2170"><a href="https://goaptaris.com/careers/">Careers</a></li>
-              </ul>   </div>
-            </div>
-          </section>
+					<div class="navbar" align="center">
+                        
+<a href="new_item_ui.php#start">New Item</a>
+<a href="modify_promotion_ui.php#start">Modify Item</a>
+<a href="new_promotion_ui.php#start">New Promotion</a>
+<a href="modify_promotion_ui.php#start">Modify Promotion</a>
+<a href="new_adevent_ui.php#start">Add New Ad Event</a>
+                        <a href="modify_adevent_ui.php#start">Modify Ad Event</a>
+<a href="report_ui.php#start">Report</a>
 
-          <!-- navigation end --> 
+  <div class="dropdown">
+    <button class="dropbtn">Administrative Console
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="home.html#start">Home</a>
+      <a href="index.php#start">Logout</a>
+    </div>
+  </div> 
+                        </div>
+                        
+            </section>
+					<!-- navigation end --> 
           <!-- banner start -->
           <section class="banner row">
             <div class="blog-banner desktop-view">
@@ -380,7 +478,16 @@ Click the help icon above to learn more.
               }
             </style>
             <!-- content end -->
-
+   <!-- change color of li on hover -->
+    <script>
+        $(document).ready(function () {
+    $('.nav1 ul li a').hover(function () {
+        $(this).css("color", "orange");
+    }, function () {
+        $(this).css("color", "#4e4f51");
+    });
+});
+</script>
 
             <script>
               var num = 0;
@@ -494,7 +601,7 @@ Click the help icon above to learn more.
 </div>
 </footer>
 <!-- footer end -->
-</div>
+
 
 <!-- DO NOT COPY THIS SNIPPET! &mdash; HubSpot Identification Code -->
 <script type="text/javascript">

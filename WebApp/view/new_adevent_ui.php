@@ -10,7 +10,101 @@
 	<link href="https://goaptaris.com/wp-content/themes/aptaris/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+	 <!-- My shit -->
+<style>
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+    background-color: transparent;
+    align-content: center;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+    .wrap 
+    {text-align:center; }
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    color: orange;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    color: white;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: transparent;
+    color: orange;
+    
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+    
+    .fu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+.ck a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+.ck a:hover {
+    background-color: #555;
+    color: white;
+}
+    
+    
+    
+</style>
+    
+    <!-- End of My Shit -->
 	
 	<!-- This site is optimized with the Yoast SEO plugin v5.6.1 - https://yoast.com/wordpress/plugins/seo/ -->
 	<link rel="canonical" href="https://goaptaris.com/insightsnews/" />
@@ -193,37 +287,40 @@ Click the help icon above to learn more.
 				</div>
 			</header>
 			<!-- header end -->
-			<!-- navigation start -->
-			<span class="nav_trigger"><i class="fa fa-navicon"></i></span>
-			<!-- #push_sidebar -->
-			<div id="push_sidebar">
-				<div class="menu-logo">
-					<img src="https://goaptaris.com/wp-content/themes/aptaris/images/footer-logo.png" alt=""/>
-				</div>
-				<ul id="menu-sub-menu" class="menu"><li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="https://goaptaris.com/solution/">Solution</a></li>
-					<li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="https://goaptaris.com/about-us/">About Us</a></li>
-					<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-15 current_page_item menu-item-19"><a href="https://goaptaris.com/insightsnews/">Insights / News</a></li>
-					<li id="menu-item-2170" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2170"><a href="https://goaptaris.com/careers/">Careers</a></li>
-				</ul>				<div class="social">
+			<!-- navigation start -->		
+                        <div class="social">
 					<div id="text-3" class="widget_text">			<div class="textwidget"><a target="_blank" href="https://twitter.com/goaptaris" class="icon1"></a>
 						<a target="_blank" href="https://www.facebook.com/Aptaris/" class="icon2"></a>
 						<a target="_blank" href="https://www.linkedin.com/company/aptaris" class="icon3"></a>
 						<a target="_blank" href="https://www.youtube.com/channel/UCaH0rZ7rvI6MQyOnUGTBSnQ" class="icon4"></a>
 						<!--<a href="#" class="icon5"></a>--></div>
 					</div>		</div>
-				</div>
+        
 				<!-- /#push_sidebar -->
-				<section class="navi row">
-					<div class="container">
-						<div class="navigation">
-							<ul id="menu-sub-menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="https://goaptaris.com/solution/">Solution</a></li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="https://goaptaris.com/about-us/">About Us</a></li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-15 current_page_item menu-item-19"><a href="https://goaptaris.com/insightsnews/">Insights / News</a></li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2170"><a href="https://goaptaris.com/careers/">Careers</a></li>
-							</ul>		</div>
-						</div>
-					</section>
+        <!-- NAVBAR -->
+        <section class="navi row">
+					<div class="navbar" align="center">
+                        
+<a href="new_item_ui.php#start">New Item</a>
+<a href="modify_promotion_ui.php#start">Modify Item</a>
+<a href="new_promotion_ui.php#start">New Promotion</a>
+<a href="modify_promotion_ui.php#start">Modify Promotion</a>
+<a href="new_adevent_ui.php#start">Add New Ad Event</a>
+                        <a href="modify_adevent_ui.php#start">Modify Ad Event</a>
+<a href="report_ui.php#start">Report</a>
 
+  <div class="dropdown">
+    <button class="dropbtn">Administrative Console
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="home.html#start">Home</a>
+      <a href="index.php#start">Logout</a>
+    </div>
+  </div> 
+                        </div>
+                        
+            </section>
 					<!-- navigation end --> 
 					<!-- banner start -->
 					<section class="banner row">
@@ -244,15 +341,15 @@ Click the help icon above to learn more.
 					</section>
 					<!-- banner end -->
 					<!-- content start -->
-					<div class="content row" id = "start">
+				<div class="content row" id = "start">
 						<div class="container">
 							<div class="blog-content row">
-								
-								<div id="left-sidebar">
+						<div id="left-sidebar">
 									<br><br><br>
 									
 									<h2>categories</h2>
 									<input type="hidden" value="0" id="myClassAdd" />
+                            <nav class="nav1">
 									<ul class="list-cat">
 										<li class='cat-item-all'><a href='./new_item_ui.php#start'>Insert new Item</a>
 										</li>	
@@ -270,6 +367,7 @@ Click the help icon above to learn more.
 										</li>
 
 									</ul>
+                            </nav>
 								</div>
 								<div class="right-side">
 									<!-- ####################Insert CSC423 Stuff here#############################-->
@@ -287,12 +385,12 @@ Click the help icon above to learn more.
 											<div class="one_half"><span class="wpcf7-form-control-wrap AdCode"><input type="text" id = "AdCode" name="AdCode" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Event Code" /></span></div>
                       <div class="one_half"><span class="wpcf7-form-control-wrap AdName"><input type="text" id = "AdName" name="AdName" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Ad Name" /></span></div>
                       
-                      	<table class='date'>
-													<tr>
-														<td style ="><div class="one_half last"><span class="wpcf7-form-control-wrap bussinessemail">Ad Start :  <input type="date" min="1" step="any" id =  "AdStart" name = "AdStart" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span></div></td>
-														<td><div class="one_half"><span class="wpcf7-form-control-wrap companysize">Ad End :  <input type="date" min="1" step="any" id="AdEnd" name="AdEnd" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span></div></td>
-													</tr>
-												</table>
+                      	                      	<div class="date">
+<label for="from" style="color:#4e4f51;" ></label>
+<input type="text" id="from" name="from" placeholder="Ad Start" />
+<label for="to" style="color:#4e4f51;" ></label>
+<input type="text" id="to" name="to" placeholder="Ad End"/>
+</div>
                       
                       <div class="one_half"><span class="wpcf7-form-control-wrap AdDesc"><input type="text" id = "AdDesc" name="AdDesc" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Ad Description" /></span></div>
 											<div class="select-box"><span class="wpcf7-form-control-wrap AdType"><select id = "AdEventType" name="AdEventType" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"aria-required="true" aria-invalid="false">
@@ -376,6 +474,36 @@ Click the help icon above to learn more.
 									});
 								});
 							</script>
+      <!--- date picker -->
+    <script>
+     $(function() {
+    $( "#from, #to" ).datepicker({
+        defaultDate: "+1w",
+        changeMonth: true,
+        numberOfMonths: 1,
+        onSelect: function( selectedDate ) {
+            if(this.id == 'from'){
+              var dateMin = $('#from').datepicker("getDate");
+              var rMin = new Date(dateMin.getFullYear(), dateMin.getMonth(),dateMin.getDate() + 1); // Min Date = Selected + 1d
+              var rMax = new Date(dateMin.getFullYear(), dateMin.getMonth(),dateMin.getDate() + 31); // Max Date = Selected + 31d
+              $('#to').datepicker("option","minDate",rMin);
+              $('#to').datepicker("option","maxDate",rMax);                    
+            }
+
+        }
+    }).css("background-color","red");
+});
+    </script>
+    <!-- change color of li on hover -->
+    <script>
+        $(document).ready(function () {
+    $('.nav1 ul li a').hover(function () {
+        $(this).css("color", "orange");
+    }, function () {
+        $(this).css("color", "#4e4f51");
+    });
+});
+</script>
 							<script type="text/javascript">
 								setInterval(function(){
 									if($('.form-section form').hasClass('sent')){
@@ -451,7 +579,7 @@ Click the help icon above to learn more.
 </div>
 </footer>
 <!-- footer end -->
-</div>
+
 
 <!-- DO NOT COPY THIS SNIPPET! &mdash; HubSpot Identification Code -->
 <script type="text/javascript">

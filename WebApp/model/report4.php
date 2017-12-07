@@ -22,7 +22,7 @@
 			$output = "Error in finding promo with these variables: $off, $type : ". mysql_error();
 		}
 		
-		show_report2_result($result, $output, $off, $type);
+		show_report4_result();
 	}
 	function connect_and_select_db($server, $username, $pwd, $dbname){
 		$conn = mysql_connect($server, $username, $pwd);

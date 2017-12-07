@@ -238,7 +238,7 @@ Click the help icon above to learn more.
 					</section>
 					<!-- banner end -->
 					<!-- content start -->
-					<div class="content row">
+		          <div class="content row" id = "start">
 						<div class="container">
 							<div class="blog-content row">
 

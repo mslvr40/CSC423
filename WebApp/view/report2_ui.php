@@ -209,6 +209,12 @@ Click the help icon above to learn more.
 				<!-- /#push_sidebar -->
 				<section class="navi row">
 					<div class="container">
+						<div class="navigation">
+							<ul id="menu-sub-menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="https://goaptaris.com/solution/">Solution</a></li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="https://goaptaris.com/about-us/">About Us</a></li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-15 current_page_item menu-item-19"><a href="https://goaptaris.com/insightsnews/">Insights / News</a></li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2170"><a href="https://goaptaris.com/careers/">Careers</a></li>
+							</ul>		</div>
 						</div>
 					</section>
 
@@ -242,17 +248,17 @@ Click the help icon above to learn more.
 									<h2>categories</h2>
 									<input type="hidden" value="0" id="myClassAdd" />
 									<ul class="list-cat">
-										<li class='cat-item-all'><a href='./new_item_ui.php'>Insert new Item</a></li>	
+										<li class='cat-item-all'><a href='./new_item_ui.php#start'>Insert new Item</a></li>	
 									</li>
-									<li class="cat-item cat-item-137"><a href="./search_item_ui.php" >Modify Existing Item</a>
+									<li class="cat-item cat-item-137"><a href="./search_item_ui.php#start" >Modify Existing Item</a>
 									</li>
-									<li class="cat-item cat-item-15"><a href="./new_promotion_ui.php" >Insert new Promotion</a>
+									<li class="cat-item cat-item-15"><a href="./new_promotion_ui.php#start" >Insert new Promotion</a>
 									</li>
-									<li class="cat-item cat-item-390"><a href="./search_promotion_ui.php" >Modify Existing Promotion</a>
+									<li class="cat-item cat-item-390"><a href="./search_promotion_ui.php#start" >Modify Existing Promotion</a>
 									</li>
-									<li class="cat-item cat-item-12"><a href="./new_adevent_ui.php" >Add new Ad Event</a>
+									<li class="cat-item cat-item-12"><a href="./new_adevent_ui.php#start" >Add new Ad Event</a>
 									</li>
-									<li class="cat-item cat-item-1"><a href="./search_adevent_ui.php" >Modify Existing Ad Event</a>
+									<li class="cat-item cat-item-1"><a href="./search_adevent_ui.php#start" >Modify Existing Ad Event</a>
 									</li>
 									<li class="cat-item cat-item-1"><a href="./report_ui.php#start" >Reports</a>
 								   	 </li>

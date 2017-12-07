@@ -2,7 +2,7 @@
 <head></head>
 <body>
 	<?php
-	require('../view/report1_result.inc');
+	require('../view/report2_result.inc');
 	require('../db.inc');
 
 	insert_promo();
